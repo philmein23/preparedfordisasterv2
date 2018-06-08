@@ -7,7 +7,9 @@ import {
 } from 'react-router-dom';
 import Home from './Home';
 import Navbar from './Navbar';
-
+import Login from './Login';
+import Register from './Register';
+import NewEmergencyPlan from './forms/NewEmergencyPlan';
 class App extends Component {
   render() {
     return (
@@ -15,7 +17,10 @@ class App extends Component {
         <Fragment>
           <Navbar />
           <Switch>
-            <Route path="/" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route exact path="/" component={Home} />
+            <Route path="/create" component={NewEmergencyPlan} />
           </Switch>
         </Fragment>
       </Router>

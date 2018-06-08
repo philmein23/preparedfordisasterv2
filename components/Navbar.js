@@ -9,7 +9,7 @@ const navGrid = css({
   fontFamily: 'gnuolane, sans-serif',
   display: 'grid',
   gridAutoFlow: 'column',
-  gridGap: '10px',
+  gridGap: '20px',
   alignItems: 'center'
 });
 
@@ -17,7 +17,8 @@ const navTextStyle = css({
   '> a': {
     textDecoration: 'none',
     color: '#060906',
-    fontSize: '20px'
+    fontSize: '20px',
+    letterSpacing: '1px'
   }
 });
 
@@ -34,6 +35,7 @@ export default function Navbar() {
     >
       <h1
         css={{
+          letterSpacing: '2px',
           textTransform: 'uppercase'
         }}
       >
@@ -41,7 +43,7 @@ export default function Navbar() {
       </h1>
       <nav {...navGrid} {...navTextStyle}>
         <Link to="/">Home</Link>
-        <Link to="/create">New Emergency Plan</Link>
+        <Link to="/create">New Plan</Link>
         <Link to="/about">About</Link>
         <Link to="/resources">Resources</Link>
       </nav>
