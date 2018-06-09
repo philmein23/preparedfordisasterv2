@@ -1,6 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'proxima-nova', sans-serif;
   background: #66ee78;
+}
+
+input {
+  border: 1px solid #e6ecf0;
+  width: 100%;
+  background-color: #f5f8fa;
+  border-radius: 10px;
+  padding: 3px 5px;
+  height: 32px;
 }

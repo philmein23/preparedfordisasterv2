@@ -16,11 +16,7 @@ function Address({
   city,
   state,
   zipcode,
-  onAddressChange,
-  onCityChange,
-  onZipCodeChange,
-  onStateChange,
-  onCountryChange
+  onAddressChange
 }) {
   return (
     <Fragment>

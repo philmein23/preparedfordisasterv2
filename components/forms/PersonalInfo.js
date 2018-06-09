@@ -24,15 +24,11 @@ function PersonalInfo({
   onPersonFirstNameChange,
   onPersonLastNameChange,
   onPersonEmailAddressChange,
-  onPersonPhoneNumberChange,
-  firstName,
-  lastName,
-  emailAddress,
-  phoneNumber
+  onPersonPhoneNumberChange
 }) {
   return (
     <NewEmergencyPlan.Consumer>
-      {({ address1, address2, handleUpdateInformation }) => (
+      {({ personalInfo, handleUpdateInformation }) => (
         <div {...formContainer}>
           <form {...formGrid}>
             <div>
@@ -42,7 +38,7 @@ function PersonalInfo({
                 type="text"
                 name="firstName"
                 placeholder="First Name"
-                value={firstName}
+                value={personalInfo.firstName}
                 onChange={onPersonFirstNameChange}
               />
             </div>
@@ -53,7 +49,7 @@ function PersonalInfo({
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
-                value={lastName}
+                value={personalInfo.lastName}
                 onChange={onPersonLastNameChange}
               />
             </div>
@@ -64,7 +60,7 @@ function PersonalInfo({
                 type="text"
                 name="emailAddress"
                 placeholder="Email Address"
-                value={emailAddress}
+                value={personalInfo.emailAddress}
                 onChange={onPersonEmailAddressChange}
               />
             </div>
@@ -75,13 +71,12 @@ function PersonalInfo({
                 type="text"
                 name="phoneNumber"
                 placeholder="Phone Number"
-                value={phoneNumber}
+                value={personalInfo.phoneNumber}
                 onChange={onPersonPhoneNumberChange}
               />
             </div>
             <Address
-              address1={address1}
-              address2={address2}
+              {...personalInfo}
               onAddressChange={handleUpdateInformation(
                 'personalInfo',
                 'address1'

@@ -12,8 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "babel-jest": "^23.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.1",
     "glamor": "^2.20.40",
     "jest": "^23.1.0",
     "react": "^16.4.0",
