@@ -27923,8 +27923,35 @@ function Login(_ref) {
 
 exports.default = Login;
 },{"react":6,"react-router-dom":15,"glamor/react":31,"glamor":30}],12:[function(require,module,exports) {
+'use strict';
 
-},{}],43:[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/Register.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Register() {
+  return _react2.default.createElement(
+    _react.Fragment,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 4
+      },
+      __self: this
+    },
+    'Register'
+  );
+}
+
+exports.default = Register;
+},{"react":6}],43:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28462,7 +28489,65 @@ function PersonalInfo(_ref) {
 }
 
 exports.default = PersonalInfo;
-},{"react":6,"./NewEmergencyPlan":14,"./Address":43,"glamor/react":31,"glamor":30}],14:[function(require,module,exports) {
+},{"react":6,"./NewEmergencyPlan":14,"./Address":43,"glamor/react":31,"glamor":30}],125:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/EmergencyContact.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function EmergencyContact() {
+  return _react2.default.createElement(
+    _react.Fragment,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 4
+      },
+      __self: this
+    },
+    'EmergencyContact'
+  );
+}
+
+exports.default = EmergencyContact;
+},{"react":6}],130:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/RallyInfo.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function RallyInfo() {
+  return _react2.default.createElement(
+    _react.Fragment,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 4
+      },
+      __self: this
+    },
+    'Rally Information'
+  );
+}
+
+exports.default = RallyInfo;
+},{"react":6}],14:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28482,6 +28567,14 @@ var _react2 = _interopRequireDefault(_react);
 var _PersonalInfo = require('./PersonalInfo');
 
 var _PersonalInfo2 = _interopRequireDefault(_PersonalInfo);
+
+var _EmergencyContact = require('./EmergencyContact');
+
+var _EmergencyContact2 = _interopRequireDefault(_EmergencyContact);
+
+var _RallyInfo = require('./RallyInfo');
+
+var _RallyInfo2 = _interopRequireDefault(_RallyInfo);
 
 var _react3 = require('glamor/react');
 
@@ -28515,6 +28608,28 @@ var formContainer = (0, _glamor.css)({
   boxSizing: 'border-box'
 });
 
+var buttonContainer = (0, _glamor.css)({
+  padding: '3px 10px',
+  display: 'flex',
+  justifyContent: 'flex-end'
+});
+
+var back = (0, _glamor.css)({
+  border: 'none',
+  fontWeight: 'bold',
+  textTransform: 'uppercase'
+});
+
+var submit = (0, _glamor.css)({
+  border: 'none',
+  padding: '10px 15px',
+  backgroundColor: '#060906',
+  borderRadius: '5px',
+  color: '#FDFDFD',
+  textTransform: 'uppercase',
+  letterSpacing: '1px'
+});
+
 var NewEmergencyPlan = function (_Component) {
   _inherits(NewEmergencyPlan, _Component);
 
@@ -28538,7 +28653,34 @@ var NewEmergencyPlan = function (_Component) {
           return _defineProperty({}, category, Object.assign({}, state[category], _defineProperty({}, fieldName, value)));
         });
       };
+    }, _this.handleSubmit = function (e) {
+      e.preventDefault();
+
+      var step = _this.state.step;
+
+
+      if (step <= 4) {
+        _this.setState(function () {
+          return {
+            step: step + 1
+          };
+        });
+      } else {
+        console.log('form submitted');
+      }
+    }, _this.returnPreviousStep = function (e) {
+      e.preventDefault();
+
+      var step = _this.state.step;
+
+
+      _this.setState(function () {
+        return {
+          step: step <= 4 ? step - 1 : 1
+        };
+      });
     }, _this.state = {
+      step: 1,
       personalInfo: Object.assign({
         firstName: '',
         lastName: '',
@@ -28558,14 +28700,16 @@ var NewEmergencyPlan = function (_Component) {
   _createClass(NewEmergencyPlan, [{
     key: 'render',
     value: function render() {
-      var personalInfo = this.state.personalInfo;
+      var _state = this.state,
+          personalInfo = _state.personalInfo,
+          step = _state.step;
 
       console.log(this.state);
       return (0, _react3.createElement)(
         NewPlanContext.Provider,
         { value: this.state, __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 124
           },
           __self: this
         },
@@ -28574,19 +28718,22 @@ var NewEmergencyPlan = function (_Component) {
           _extends({}, formContainer, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 76
+              lineNumber: 125
             },
             __self: this
           }),
           (0, _react3.createElement)(
             'form',
-            { css: { display: 'grid', gridRowGap: '40px' }, __source: {
+            {
+              onSubmit: this.handleSubmit,
+              css: { display: 'grid', gridRowGap: '40px' },
+              __source: {
                 fileName: _jsxFileName,
-                lineNumber: 77
+                lineNumber: 126
               },
               __self: this
             },
-            (0, _react3.createElement)(_PersonalInfo2.default, {
+            step === 1 && (0, _react3.createElement)(_PersonalInfo2.default, {
               firstName: personalInfo.firstName,
               lastName: personalInfo.lastName,
               emailAddress: personalInfo.emailAddress,
@@ -28597,10 +28744,54 @@ var NewEmergencyPlan = function (_Component) {
               onPersonPhoneNumberChange: this.handleUpdateInformation('personalInfo', 'phoneNumber'),
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 78
+                lineNumber: 131
               },
               __self: this
-            })
+            }),
+            step === 2 && (0, _react3.createElement)(_EmergencyContact2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 155
+              },
+              __self: this
+            }),
+            step === 3 && (0, _react3.createElement)(_RallyInfo2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 157
+              },
+              __self: this
+            }),
+            (0, _react3.createElement)(
+              'div',
+              _extends({}, buttonContainer, {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 159
+                },
+                __self: this
+              }),
+              !(step === 1) && (0, _react3.createElement)(
+                'button',
+                _extends({}, back, { onClick: this.returnPreviousStep, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 161
+                  },
+                  __self: this
+                }),
+                'Back'
+              ),
+              (0, _react3.createElement)(
+                'button',
+                _extends({}, submit, { type: 'submit', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 165
+                  },
+                  __self: this
+                }),
+                'Next'
+              )
+            )
           )
         )
       );
@@ -28624,7 +28815,7 @@ var NewEmergencyPlan = function (_Component) {
 
 NewEmergencyPlan.Consumer = NewPlanContext.Consumer;
 exports.default = NewEmergencyPlan;
-},{"react":6,"./PersonalInfo":32,"glamor/react":31,"glamor":30}],4:[function(require,module,exports) {
+},{"react":6,"./PersonalInfo":32,"./EmergencyContact":125,"./RallyInfo":130,"glamor/react":31,"glamor":30}],4:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28774,7 +28965,7 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, {
   },
   __self: undefined
 }), document.getElementById('app'));
-},{"react":6,"react-dom":7,"./components/App":4}],124:[function(require,module,exports) {
+},{"react":6,"react-dom":7,"./components/App":4}],129:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -28944,5 +29135,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[124,3], null)
+},{}]},{},[129,3], null)
 //# sourceMappingURL=/prepared_for_disaster_v2.5fe5b813.map

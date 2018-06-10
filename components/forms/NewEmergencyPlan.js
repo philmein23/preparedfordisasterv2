@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PersonalInfo from './PersonalInfo';
+import EmergencyContact from './EmergencyContact';
+import RallyInfo from './RallyInfo';
 
 import { createElement } from 'glamor/react';
 import { css } from 'glamor';
@@ -21,6 +23,28 @@ const formContainer = css({
   boxSizing: 'border-box'
 });
 
+const buttonContainer = css({
+  padding: '3px 10px',
+  display: 'flex',
+  justifyContent: 'flex-end'
+});
+
+const back = css({
+  border: 'none',
+  fontWeight: 'bold',
+  textTransform: 'uppercase'
+});
+
+const submit = css({
+  border: 'none',
+  padding: '10px 15px',
+  backgroundColor: '#060906',
+  borderRadius: '5px',
+  color: '#FDFDFD',
+  textTransform: 'uppercase',
+  letterSpacing: '1px'
+});
+
 class NewEmergencyPlan extends Component {
   static Consumer = NewPlanContext.Consumer;
 
@@ -37,7 +61,32 @@ class NewEmergencyPlan extends Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+
+    const { step } = this.state;
+
+    if (step <= 4) {
+      this.setState(() => ({
+        step: step + 1
+      }));
+    } else {
+      console.log('form submitted');
+    }
+  };
+
+  returnPreviousStep = e => {
+    e.preventDefault();
+
+    const { step } = this.state;
+
+    this.setState(() => ({
+      step: step <= 4 ? step - 1 : 1
+    }));
+  };
+
   state = {
+    step: 1,
     personalInfo: {
       firstName: '',
       lastName: '',
@@ -69,34 +118,54 @@ class NewEmergencyPlan extends Component {
   }
 
   render() {
-    const { personalInfo } = this.state;
+    const { personalInfo, step } = this.state;
     console.log(this.state);
     return (
       <NewPlanContext.Provider value={this.state}>
         <div {...formContainer}>
-          <form css={{ display: 'grid', gridRowGap: '40px' }}>
-            <PersonalInfo
-              firstName={personalInfo.firstName}
-              lastName={personalInfo.lastName}
-              emailAddress={personalInfo.emailAddress}
-              phoneNumber={personalInfo.phoneNumber}
-              onPersonFirstNameChange={this.handleUpdateInformation(
-                'personalInfo',
-                'firstName'
+          <form
+            onSubmit={this.handleSubmit}
+            css={{ display: 'grid', gridRowGap: '40px' }}
+          >
+            {step === 1 && (
+              <PersonalInfo
+                firstName={personalInfo.firstName}
+                lastName={personalInfo.lastName}
+                emailAddress={personalInfo.emailAddress}
+                phoneNumber={personalInfo.phoneNumber}
+                onPersonFirstNameChange={this.handleUpdateInformation(
+                  'personalInfo',
+                  'firstName'
+                )}
+                onPersonLastNameChange={this.handleUpdateInformation(
+                  'personalInfo',
+                  'lastName'
+                )}
+                onPersonEmailAddressChange={this.handleUpdateInformation(
+                  'personalInfo',
+                  'emailAddress'
+                )}
+                onPersonPhoneNumberChange={this.handleUpdateInformation(
+                  'personalInfo',
+                  'phoneNumber'
+                )}
+              />
+            )}
+
+            {step === 2 && <EmergencyContact />}
+
+            {step === 3 && <RallyInfo />}
+
+            <div {...buttonContainer}>
+              {!(step === 1) && (
+                <button {...back} onClick={this.returnPreviousStep}>
+                  Back
+                </button>
               )}
-              onPersonLastNameChange={this.handleUpdateInformation(
-                'personalInfo',
-                'lastName'
-              )}
-              onPersonEmailAddressChange={this.handleUpdateInformation(
-                'personalInfo',
-                'emailAddress'
-              )}
-              onPersonPhoneNumberChange={this.handleUpdateInformation(
-                'personalInfo',
-                'phoneNumber'
-              )}
-            />
+              <button {...submit} type="submit">
+                Next
+              </button>
+            </div>
           </form>
         </div>
       </NewPlanContext.Provider>
