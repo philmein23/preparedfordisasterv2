@@ -32,7 +32,8 @@ const buttonContainer = css({
 const back = css({
   border: 'none',
   fontWeight: 'bold',
-  textTransform: 'uppercase'
+  textTransform: 'uppercase',
+  padding: '0 15px'
 });
 
 const submit = css({

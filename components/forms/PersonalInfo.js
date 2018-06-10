@@ -12,6 +12,12 @@ const formGrid = css({
   gridGap: '15px'
 });
 
+const stepLabel = css({
+  textTransform: 'uppercase',
+  fontWeight: 'bold',
+  letterSpacing: '1px'
+});
+
 function PersonalInfo({
   onPersonFirstNameChange,
   onPersonLastNameChange,
@@ -31,6 +37,11 @@ function PersonalInfo({
 
         return (
           <Fragment>
+            <div {...stepLabel}>
+              <span>Step 1</span>
+              <span> - </span>
+              <span>Personal Information</span>
+            </div>
             <div {...formGrid}>
               <div css={{ alignSelf: 'center' }}>
                 <span>General Information</span>
