@@ -5,11 +5,23 @@ body {
   background: #66ee78;
 }
 
-input {
+input,
+select {
   border: 1px solid #e6ecf0;
-  width: 100%;
   background-color: #f5f8fa;
   border-radius: 10px;
   padding: 3px 5px;
   height: 32px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.form-field-container {
+  display: grid;
+  grid-row-gap: 15px;
 }

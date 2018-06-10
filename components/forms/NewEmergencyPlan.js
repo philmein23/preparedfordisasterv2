@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import PersonalInfo from './PersonalInfo';
 
+import { createElement } from 'glamor/react';
+import { css } from 'glamor';
+/* @jsx createElement */
+
 const NewPlanContext = React.createContext({
   personalInfo: {},
   emergencyContact: {},
   rallyInfo: {},
   userKits: []
+});
+
+const formContainer = css({
+  backgroundColor: '#FDFDFD',
+  margin: '50px auto',
+  width: '40vw',
+  padding: '20px 40px',
+  borderRadius: '10px',
+  boxSizing: 'border-box'
 });
 
 class NewEmergencyPlan extends Component {
@@ -50,7 +63,8 @@ class NewEmergencyPlan extends Component {
       address2: '',
       city: '',
       state: '',
-      zipCode: ''
+      zipCode: '',
+      country: ''
     };
   }
 
@@ -59,28 +73,32 @@ class NewEmergencyPlan extends Component {
     console.log(this.state);
     return (
       <NewPlanContext.Provider value={this.state}>
-        <PersonalInfo
-          firstName={personalInfo.firstName}
-          lastName={personalInfo.lastName}
-          emailAddress={personalInfo.emailAddress}
-          phoneNumber={personalInfo.phoneNumber}
-          onPersonFirstNameChange={this.handleUpdateInformation(
-            'personalInfo',
-            'firstName'
-          )}
-          onPersonLastNameChange={this.handleUpdateInformation(
-            'personalInfo',
-            'lastName'
-          )}
-          onPersonEmailAddressChange={this.handleUpdateInformation(
-            'personalInfo',
-            'emailAddress'
-          )}
-          onPersonPhoneNumberChange={this.handleUpdateInformation(
-            'personalInfo',
-            'phoneNumber'
-          )}
-        />
+        <div {...formContainer}>
+          <form css={{ display: 'grid', gridRowGap: '40px' }}>
+            <PersonalInfo
+              firstName={personalInfo.firstName}
+              lastName={personalInfo.lastName}
+              emailAddress={personalInfo.emailAddress}
+              phoneNumber={personalInfo.phoneNumber}
+              onPersonFirstNameChange={this.handleUpdateInformation(
+                'personalInfo',
+                'firstName'
+              )}
+              onPersonLastNameChange={this.handleUpdateInformation(
+                'personalInfo',
+                'lastName'
+              )}
+              onPersonEmailAddressChange={this.handleUpdateInformation(
+                'personalInfo',
+                'emailAddress'
+              )}
+              onPersonPhoneNumberChange={this.handleUpdateInformation(
+                'personalInfo',
+                'phoneNumber'
+              )}
+            />
+          </form>
+        </div>
       </NewPlanContext.Provider>
     );
   }

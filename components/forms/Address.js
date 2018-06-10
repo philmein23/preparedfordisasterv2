@@ -15,36 +15,56 @@ function Address({
   address2,
   city,
   state,
-  zipcode,
-  onAddressChange
+  zipCode,
+  country,
+  ...handlers
 }) {
+  const {
+    onAddressChange,
+    onCityChange,
+    onCountryChange,
+    onStateChange,
+    onZipCodeChange
+  } = handlers;
   return (
     <Fragment>
-      <form>
-        <div {...formGrid}>
+      <div {...formGrid}>
+        <div css={{ alignSelf: 'center' }}>
+          <span>Personal Address</span>
+        </div>
+        <div className="form-field-container">
           <div>
-            <span>Personal Address</span>
+            <label htmlFor="address-line-1">Address Line 1</label>
+            <input
+              id="address-line-1"
+              value={address1}
+              onChange={onAddressChange}
+            />
           </div>
           <div>
-            <div>
-              <label htmlFor="address-line-1">Address Line 1</label>
-              <input
-                id="address-line-1"
-                value={address1}
-                onChange={onAddressChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="address-line-2">Address Line 2</label>
-              <input
-                id="address-line-2"
-                value={address2}
-                onChange={onAddressChange}
-              />
-            </div>
+            <label htmlFor="city">City</label>
+            <input id="city" value={city} onChange={onCityChange} />
+          </div>
+          <div>
+            <label htmlFor="zip-code">Zip Code</label>
+            <input id="zip-code" value={zipCode} onChange={onZipCodeChange} />
+          </div>
+          <div>
+            <label htmlFor="state">State</label>
+            <select id="state" value={state} onChange={onStateChange}>
+              <option>Select State</option>
+              <option />
+            </select>
+          </div>
+          <div>
+            <label htmlFor="country">Country</label>
+            <select id="country" value={country} onChange={onCountryChange}>
+              <option>Select Country</option>
+              <option />
+            </select>
           </div>
         </div>
-      </form>
+      </div>
     </Fragment>
   );
 }

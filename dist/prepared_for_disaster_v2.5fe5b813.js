@@ -27945,6 +27945,8 @@ var _glamor = require('glamor');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 /* @jsx createElement */
 
 var formGrid = (0, _glamor.css)({
@@ -27958,55 +27960,189 @@ function Address(_ref) {
       address2 = _ref.address2,
       city = _ref.city,
       state = _ref.state,
-      zipcode = _ref.zipcode,
-      onAddressChange = _ref.onAddressChange;
+      zipCode = _ref.zipCode,
+      country = _ref.country,
+      handlers = _objectWithoutProperties(_ref, ['address1', 'address2', 'city', 'state', 'zipCode', 'country']);
+
+  var onAddressChange = handlers.onAddressChange,
+      onCityChange = handlers.onCityChange,
+      onCountryChange = handlers.onCountryChange,
+      onStateChange = handlers.onStateChange,
+      onZipCodeChange = handlers.onZipCodeChange;
 
   return (0, _react3.createElement)(
     _react.Fragment,
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 30
       },
       __self: this
     },
     (0, _react3.createElement)(
-      'form',
-      {
+      'div',
+      _extends({}, formGrid, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 31
         },
         __self: this
-      },
+      }),
       (0, _react3.createElement)(
         'div',
-        _extends({}, formGrid, {
-          __source: {
+        { css: { alignSelf: 'center' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 32
           },
           __self: this
-        }),
+        },
+        (0, _react3.createElement)(
+          'span',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 33
+            },
+            __self: this
+          },
+          'Personal Address'
+        )
+      ),
+      (0, _react3.createElement)(
+        'div',
+        { className: 'form-field-container', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          },
+          __self: this
+        },
         (0, _react3.createElement)(
           'div',
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 25
+              lineNumber: 36
             },
             __self: this
           },
           (0, _react3.createElement)(
-            'span',
-            {
-              __source: {
+            'label',
+            { htmlFor: 'address-line-1', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 26
+                lineNumber: 37
               },
               __self: this
             },
-            'Personal Address'
+            'Address Line 1'
+          ),
+          (0, _react3.createElement)('input', {
+            id: 'address-line-1',
+            value: address1,
+            onChange: onAddressChange,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 38
+            },
+            __self: this
+          })
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 44
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(
+            'label',
+            { htmlFor: 'city', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 45
+              },
+              __self: this
+            },
+            'City'
+          ),
+          (0, _react3.createElement)('input', { id: 'city', value: city, onChange: onCityChange, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 46
+            },
+            __self: this
+          })
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 48
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(
+            'label',
+            { htmlFor: 'zip-code', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 49
+              },
+              __self: this
+            },
+            'Zip Code'
+          ),
+          (0, _react3.createElement)('input', { id: 'zip-code', value: zipCode, onChange: onZipCodeChange, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 50
+            },
+            __self: this
+          })
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 52
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(
+            'label',
+            { htmlFor: 'state', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 53
+              },
+              __self: this
+            },
+            'State'
+          ),
+          (0, _react3.createElement)(
+            'select',
+            { id: 'state', value: state, onChange: onStateChange, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 54
+              },
+              __self: this
+            },
+            (0, _react3.createElement)(
+              'option',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 55
+                },
+                __self: this
+              },
+              'Select State'
+            ),
+            (0, _react3.createElement)('option', {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 56
+              },
+              __self: this
+            })
           )
         ),
         (0, _react3.createElement)(
@@ -28014,66 +28150,43 @@ function Address(_ref) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 28
+              lineNumber: 59
             },
             __self: this
           },
           (0, _react3.createElement)(
-            'div',
-            {
-              __source: {
+            'label',
+            { htmlFor: 'country', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 29
+                lineNumber: 60
               },
               __self: this
             },
-            (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'address-line-1', __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 30
-                },
-                __self: this
-              },
-              'Address Line 1'
-            ),
-            (0, _react3.createElement)('input', {
-              id: 'address-line-1',
-              value: address1,
-              onChange: onAddressChange,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 31
-              },
-              __self: this
-            })
+            'Country'
           ),
           (0, _react3.createElement)(
-            'div',
-            {
-              __source: {
+            'select',
+            { id: 'country', value: country, onChange: onCountryChange, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 37
+                lineNumber: 61
               },
               __self: this
             },
             (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'address-line-2', __source: {
+              'option',
+              {
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 38
+                  lineNumber: 62
                 },
                 __self: this
               },
-              'Address Line 2'
+              'Select Country'
             ),
-            (0, _react3.createElement)('input', {
-              id: 'address-line-2',
-              value: address2,
-              onChange: onAddressChange,
+            (0, _react3.createElement)('option', {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 39
+                lineNumber: 63
               },
               __self: this
             })
@@ -28114,19 +28227,13 @@ var _glamor = require('glamor');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* @jsx createElement */
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var formContainer = (0, _glamor.css)({
-  backgroundColor: '#FDFDFD',
-  margin: '50px auto',
-  width: '40vw',
-  padding: '20px 10px',
-  borderRadius: '10px'
-});
+/* @jsx createElement */
 
 var formGrid = (0, _glamor.css)({
   display: 'grid',
-  gridTemplateColumns: 'max-content',
+  gridTemplateColumns: '1fr 2fr',
   gridGap: '15px'
 });
 
@@ -28143,172 +28250,212 @@ function PersonalInfo(_ref) {
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 22
       },
       __self: this
     },
     function (_ref2) {
       var personalInfo = _ref2.personalInfo,
           handleUpdateInformation = _ref2.handleUpdateInformation;
+
+      var firstName = personalInfo.firstName,
+          lastName = personalInfo.lastName,
+          emailAddress = personalInfo.emailAddress,
+          phoneNumber = personalInfo.phoneNumber,
+          address = _objectWithoutProperties(personalInfo, ['firstName', 'lastName', 'emailAddress', 'phoneNumber']);
+
       return (0, _react3.createElement)(
-        'div',
-        _extends({}, formContainer, {
+        _react.Fragment,
+        {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 33
           },
           __self: _this
-        }),
+        },
         (0, _react3.createElement)(
-          'form',
+          'div',
           _extends({}, formGrid, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 34
             },
             __self: _this
           }),
           (0, _react3.createElement)(
             'div',
-            {
-              __source: {
+            { css: { alignSelf: 'center' }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34
+                lineNumber: 35
               },
               __self: _this
             },
             (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'first-name', __source: {
+              'span',
+              {
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 35
+                  lineNumber: 36
                 },
                 __self: _this
               },
-              'First Name'
-            ),
-            (0, _react3.createElement)('input', {
-              id: 'first-name',
-              type: 'text',
-              name: 'firstName',
-              placeholder: 'First Name',
-              value: personalInfo.firstName,
-              onChange: onPersonFirstNameChange,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 36
-              },
-              __self: _this
-            })
+              'General Information'
+            )
           ),
           (0, _react3.createElement)(
             'div',
-            {
-              __source: {
+            { className: 'form-field-container', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 45
+                lineNumber: 38
               },
               __self: _this
             },
             (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'last-name', __source: {
+              'div',
+              {
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 46
+                  lineNumber: 39
                 },
                 __self: _this
               },
-              'last Name'
+              (0, _react3.createElement)(
+                'label',
+                { htmlFor: 'first-name', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 40
+                  },
+                  __self: _this
+                },
+                'First Name'
+              ),
+              (0, _react3.createElement)('input', {
+                id: 'first-name',
+                type: 'text',
+                name: 'firstName',
+                placeholder: 'First Name',
+                value: firstName,
+                onChange: onPersonFirstNameChange,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 41
+                },
+                __self: _this
+              })
             ),
-            (0, _react3.createElement)('input', {
-              id: 'last-name',
-              type: 'text',
-              name: 'lastName',
-              placeholder: 'Last Name',
-              value: personalInfo.lastName,
-              onChange: onPersonLastNameChange,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 47
-              },
-              __self: _this
-            })
-          ),
-          (0, _react3.createElement)(
-            'div',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 56
-              },
-              __self: _this
-            },
             (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'email-address', __source: {
+              'div',
+              {
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 57
+                  lineNumber: 50
                 },
                 __self: _this
               },
-              'Email Address'
+              (0, _react3.createElement)(
+                'label',
+                { htmlFor: 'last-name', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 51
+                  },
+                  __self: _this
+                },
+                'last Name'
+              ),
+              (0, _react3.createElement)('input', {
+                id: 'last-name',
+                type: 'text',
+                name: 'lastName',
+                placeholder: 'Last Name',
+                value: lastName,
+                onChange: onPersonLastNameChange,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 52
+                },
+                __self: _this
+              })
             ),
-            (0, _react3.createElement)('input', {
-              id: 'email-address',
-              type: 'text',
-              name: 'emailAddress',
-              placeholder: 'Email Address',
-              value: personalInfo.emailAddress,
-              onChange: onPersonEmailAddressChange,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 58
-              },
-              __self: _this
-            })
-          ),
-          (0, _react3.createElement)(
-            'div',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 67
-              },
-              __self: _this
-            },
             (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'phone-number', __source: {
+              'div',
+              {
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 68
+                  lineNumber: 61
                 },
                 __self: _this
               },
-              'Phone Number'
+              (0, _react3.createElement)(
+                'label',
+                { htmlFor: 'email-address', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 62
+                  },
+                  __self: _this
+                },
+                'Email Address'
+              ),
+              (0, _react3.createElement)('input', {
+                id: 'email-address',
+                type: 'text',
+                name: 'emailAddress',
+                placeholder: 'Email Address',
+                value: emailAddress,
+                onChange: onPersonEmailAddressChange,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 63
+                },
+                __self: _this
+              })
             ),
-            (0, _react3.createElement)('input', {
-              id: 'phone-number',
-              type: 'text',
-              name: 'phoneNumber',
-              placeholder: 'Phone Number',
-              value: personalInfo.phoneNumber,
-              onChange: onPersonPhoneNumberChange,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 69
+            (0, _react3.createElement)(
+              'div',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 72
+                },
+                __self: _this
               },
-              __self: _this
-            })
-          ),
-          (0, _react3.createElement)(_Address2.default, _extends({}, personalInfo, {
-            onAddressChange: handleUpdateInformation('personalInfo', 'address1'),
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 78
-            },
-            __self: _this
-          }))
-        )
+              (0, _react3.createElement)(
+                'label',
+                { htmlFor: 'phone-number', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 73
+                  },
+                  __self: _this
+                },
+                'Phone Number'
+              ),
+              (0, _react3.createElement)('input', {
+                id: 'phone-number',
+                type: 'text',
+                name: 'phoneNumber',
+                placeholder: 'Phone Number',
+                value: phoneNumber,
+                onChange: onPersonPhoneNumberChange,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 74
+                },
+                __self: _this
+              })
+            )
+          )
+        ),
+        (0, _react3.createElement)(_Address2.default, _extends({}, address, {
+          onAddressChange: handleUpdateInformation('personalInfo', 'address1'),
+          onCityChange: handleUpdateInformation('personalInfo', 'city'),
+          onZipCodeChange: handleUpdateInformation('personalInfo', 'zipcode'),
+          onStateChange: handleUpdateInformation('personalInfo', 'state'),
+          onCountryChange: handleUpdateInformation('personalInfo', 'country'),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 86
+          },
+          __self: _this
+        }))
       );
     }
   );
@@ -28321,6 +28468,9 @@ exports.default = PersonalInfo;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/NewEmergencyPlan.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28333,6 +28483,10 @@ var _PersonalInfo = require('./PersonalInfo');
 
 var _PersonalInfo2 = _interopRequireDefault(_PersonalInfo);
 
+var _react3 = require('glamor/react');
+
+var _glamor = require('glamor');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -28343,11 +28497,22 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/* @jsx createElement */
+
 var NewPlanContext = _react2.default.createContext({
   personalInfo: {},
   emergencyContact: {},
   rallyInfo: {},
   userKits: []
+});
+
+var formContainer = (0, _glamor.css)({
+  backgroundColor: '#FDFDFD',
+  margin: '50px auto',
+  width: '40vw',
+  padding: '20px 40px',
+  borderRadius: '10px',
+  boxSizing: 'border-box'
 });
 
 var NewEmergencyPlan = function (_Component) {
@@ -28396,29 +28561,48 @@ var NewEmergencyPlan = function (_Component) {
       var personalInfo = this.state.personalInfo;
 
       console.log(this.state);
-      return _react2.default.createElement(
+      return (0, _react3.createElement)(
         NewPlanContext.Provider,
         { value: this.state, __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 75
           },
           __self: this
         },
-        _react2.default.createElement(_PersonalInfo2.default, {
-          firstName: personalInfo.firstName,
-          lastName: personalInfo.lastName,
-          emailAddress: personalInfo.emailAddress,
-          phoneNumber: personalInfo.phoneNumber,
-          onPersonFirstNameChange: this.handleUpdateInformation('personalInfo', 'firstName'),
-          onPersonLastNameChange: this.handleUpdateInformation('personalInfo', 'lastName'),
-          onPersonEmailAddressChange: this.handleUpdateInformation('personalInfo', 'emailAddress'),
-          onPersonPhoneNumberChange: this.handleUpdateInformation('personalInfo', 'phoneNumber'),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 62
-          },
-          __self: this
-        })
+        (0, _react3.createElement)(
+          'div',
+          _extends({}, formContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 76
+            },
+            __self: this
+          }),
+          (0, _react3.createElement)(
+            'form',
+            { css: { display: 'grid', gridRowGap: '40px' }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 77
+              },
+              __self: this
+            },
+            (0, _react3.createElement)(_PersonalInfo2.default, {
+              firstName: personalInfo.firstName,
+              lastName: personalInfo.lastName,
+              emailAddress: personalInfo.emailAddress,
+              phoneNumber: personalInfo.phoneNumber,
+              onPersonFirstNameChange: this.handleUpdateInformation('personalInfo', 'firstName'),
+              onPersonLastNameChange: this.handleUpdateInformation('personalInfo', 'lastName'),
+              onPersonEmailAddressChange: this.handleUpdateInformation('personalInfo', 'emailAddress'),
+              onPersonPhoneNumberChange: this.handleUpdateInformation('personalInfo', 'phoneNumber'),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 78
+              },
+              __self: this
+            })
+          )
+        )
       );
     }
   }], [{
@@ -28429,7 +28613,8 @@ var NewEmergencyPlan = function (_Component) {
         address2: '',
         city: '',
         state: '',
-        zipCode: ''
+        zipCode: '',
+        country: ''
       };
     }
   }]);
@@ -28439,7 +28624,7 @@ var NewEmergencyPlan = function (_Component) {
 
 NewEmergencyPlan.Consumer = NewPlanContext.Consumer;
 exports.default = NewEmergencyPlan;
-},{"react":6,"./PersonalInfo":32}],4:[function(require,module,exports) {
+},{"react":6,"./PersonalInfo":32,"glamor/react":31,"glamor":30}],4:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28589,7 +28774,7 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, {
   },
   __self: undefined
 }), document.getElementById('app'));
-},{"react":6,"react-dom":7,"./components/App":4}],117:[function(require,module,exports) {
+},{"react":6,"react-dom":7,"./components/App":4}],124:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -28759,5 +28944,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[117,3], null)
+},{}]},{},[124,3], null)
 //# sourceMappingURL=/prepared_for_disaster_v2.5fe5b813.map
