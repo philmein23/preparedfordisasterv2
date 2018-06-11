@@ -28523,7 +28523,7 @@ function PersonalInfo(_ref) {
         (0, _react3.createElement)(_Address2.default, _extends({}, address, {
           onAddressChange: handleUpdateInformation('personalInfo', 'address1'),
           onCityChange: handleUpdateInformation('personalInfo', 'city'),
-          onZipCodeChange: handleUpdateInformation('personalInfo', 'zipcode'),
+          onZipCodeChange: handleUpdateInformation('personalInfo', 'zipCode'),
           onStateChange: handleUpdateInformation('personalInfo', 'state'),
           onCountryChange: handleUpdateInformation('personalInfo', 'country'),
           __source: {
@@ -28553,11 +28553,21 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Address = require('./Address');
+
+var _Address2 = _interopRequireDefault(_Address);
+
 var _react3 = require('glamor/react');
 
 var _glamor = require('glamor');
 
+var _NewEmergencyPlan = require('./NewEmergencyPlan');
+
+var _NewEmergencyPlan2 = _interopRequireDefault(_NewEmergencyPlan);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 /* @jsx createElement */
 
@@ -28568,64 +28578,176 @@ var stepLabel = (0, _glamor.css)({
 });
 
 function EmergencyContact() {
+  var _this = this;
+
   return (0, _react3.createElement)(
-    _react.Fragment,
+    _NewEmergencyPlan2.default.Consumer,
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 18
       },
       __self: this
     },
-    (0, _react3.createElement)(
-      'div',
-      _extends({}, stepLabel, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        },
-        __self: this
-      }),
-      (0, _react3.createElement)(
-        'span',
+    function (_ref) {
+      var emergencyContact = _ref.emergencyContact,
+          handleUpdateInformation = _ref.handleUpdateInformation;
+
+      var firstName = emergencyContact.firstName,
+          lastName = emergencyContact.lastName,
+          address = _objectWithoutProperties(emergencyContact, ['firstName', 'lastName']);
+
+      return (0, _react3.createElement)(
+        _react.Fragment,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17
+            lineNumber: 22
           },
-          __self: this
+          __self: _this
         },
-        'Step 2'
-      ),
-      (0, _react3.createElement)(
-        'span',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 18
+        (0, _react3.createElement)(
+          'div',
+          _extends({}, stepLabel, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 23
+            },
+            __self: _this
+          }),
+          (0, _react3.createElement)(
+            'span',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 24
+              },
+              __self: _this
+            },
+            'Step 2'
+          ),
+          (0, _react3.createElement)(
+            'span',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 25
+              },
+              __self: _this
+            },
+            ' - '
+          ),
+          (0, _react3.createElement)(
+            'span',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 26
+              },
+              __self: _this
+            },
+            'Emergency Contact Information'
+          )
+        ),
+        (0, _react3.createElement)(
+          'div',
+          { className: 'form-field-container', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            },
+            __self: _this
           },
-          __self: this
-        },
-        ' - '
-      ),
-      (0, _react3.createElement)(
-        'span',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 19
+          (0, _react3.createElement)(
+            'div',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 29
+              },
+              __self: _this
+            },
+            (0, _react3.createElement)(
+              'label',
+              { htmlFor: 'first-name', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 30
+                },
+                __self: _this
+              },
+              'First Name'
+            ),
+            (0, _react3.createElement)('input', {
+              id: 'first-name',
+              type: 'text',
+              name: 'firstName',
+              placeholder: 'First Name',
+              value: firstName,
+              onChange: handleUpdateInformation('emergencyContact', 'firstName'),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 31
+              },
+              __self: _this
+            })
+          ),
+          (0, _react3.createElement)(
+            'div',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 43
+              },
+              __self: _this
+            },
+            (0, _react3.createElement)(
+              'label',
+              { htmlFor: 'last-name', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 44
+                },
+                __self: _this
+              },
+              'Last Name'
+            ),
+            (0, _react3.createElement)('input', {
+              id: 'last-name',
+              type: 'text',
+              name: 'lastName',
+              placeholder: 'Last Name',
+              value: lastName,
+              onChange: handleUpdateInformation('emergencyContact', 'lastName'),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 45
+              },
+              __self: _this
+            })
+          )
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 58
+            },
+            __self: _this
           },
-          __self: this
-        },
-        'Emergency Contact Information'
-      )
-    ),
-    'EmergencyContact'
+          (0, _react3.createElement)(_Address2.default, _extends({}, address, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 59
+            },
+            __self: _this
+          }))
+        )
+      );
+    }
   );
 }
 
 exports.default = EmergencyContact;
-},{"react":6,"glamor/react":31,"glamor":30}],130:[function(require,module,exports) {
+},{"react":6,"./Address":43,"glamor/react":31,"glamor":30,"./NewEmergencyPlan":14}],130:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28800,7 +28922,8 @@ var NewEmergencyPlan = function (_Component) {
   _inherits(NewEmergencyPlan, _Component);
 
   function NewEmergencyPlan() {
-    var _ref;
+    var _ref,
+        _this2 = this;
 
     var _temp, _this, _ret;
 
@@ -28860,6 +28983,43 @@ var NewEmergencyPlan = function (_Component) {
       rallyInfo: Object.assign({}, NewEmergencyPlan.getAddressTemplate()),
       userKits: [],
       handleUpdateInformation: _this.handleUpdateInformation
+    }, _this.renderFormBasedOnStepCount = function (step) {
+      var personalInfo = _this.state.personalInfo;
+
+
+      if (step === 1) {
+        return (0, _react3.createElement)(_PersonalInfo2.default, {
+          onPersonFirstNameChange: _this.handleUpdateInformation('personalInfo', 'firstName'),
+          onPersonLastNameChange: _this.handleUpdateInformation('personalInfo', 'lastName'),
+          onPersonEmailAddressChange: _this.handleUpdateInformation('personalInfo', 'emailAddress'),
+          onPersonPhoneNumberChange: _this.handleUpdateInformation('personalInfo', 'phoneNumber'),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 126
+          },
+          __self: _this2
+        });
+      }
+
+      if (step === 2) {
+        return (0, _react3.createElement)(_EmergencyContact2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 148
+          },
+          __self: _this2
+        });
+      }
+
+      if (step === 3) {
+        return (0, _react3.createElement)(_RallyInfo2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 152
+          },
+          __self: _this2
+        });
+      }
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -28875,7 +29035,7 @@ var NewEmergencyPlan = function (_Component) {
         NewPlanContext.Provider,
         { value: this.state, __source: {
             fileName: _jsxFileName,
-            lineNumber: 125
+            lineNumber: 160
           },
           __self: this
         },
@@ -28884,7 +29044,7 @@ var NewEmergencyPlan = function (_Component) {
           _extends({}, formContainer, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 126
+              lineNumber: 161
             },
             __self: this
           }),
@@ -28895,45 +29055,17 @@ var NewEmergencyPlan = function (_Component) {
               css: { display: 'grid', gridRowGap: '40px' },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 127
+                lineNumber: 162
               },
               __self: this
             },
-            step === 1 && (0, _react3.createElement)(_PersonalInfo2.default, {
-              firstName: personalInfo.firstName,
-              lastName: personalInfo.lastName,
-              emailAddress: personalInfo.emailAddress,
-              phoneNumber: personalInfo.phoneNumber,
-              onPersonFirstNameChange: this.handleUpdateInformation('personalInfo', 'firstName'),
-              onPersonLastNameChange: this.handleUpdateInformation('personalInfo', 'lastName'),
-              onPersonEmailAddressChange: this.handleUpdateInformation('personalInfo', 'emailAddress'),
-              onPersonPhoneNumberChange: this.handleUpdateInformation('personalInfo', 'phoneNumber'),
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 132
-              },
-              __self: this
-            }),
-            step === 2 && (0, _react3.createElement)(_EmergencyContact2.default, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 156
-              },
-              __self: this
-            }),
-            step === 3 && (0, _react3.createElement)(_RallyInfo2.default, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 158
-              },
-              __self: this
-            }),
+            this.renderFormBasedOnStepCount(step),
             (0, _react3.createElement)(
               'div',
               _extends({}, buttonContainer, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 160
+                  lineNumber: 168
                 },
                 __self: this
               }),
@@ -28941,7 +29073,7 @@ var NewEmergencyPlan = function (_Component) {
                 'button',
                 _extends({}, back, { onClick: this.returnPreviousStep, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 162
+                    lineNumber: 170
                   },
                   __self: this
                 }),
@@ -28951,7 +29083,7 @@ var NewEmergencyPlan = function (_Component) {
                 'button',
                 _extends({}, submit, { type: 'submit', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 166
+                    lineNumber: 174
                   },
                   __self: this
                 }),

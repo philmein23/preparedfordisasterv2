@@ -118,6 +118,41 @@ class NewEmergencyPlan extends Component {
     };
   }
 
+  renderFormBasedOnStepCount = step => {
+    const { personalInfo } = this.state;
+
+    if (step === 1) {
+      return (
+        <PersonalInfo
+          onPersonFirstNameChange={this.handleUpdateInformation(
+            'personalInfo',
+            'firstName'
+          )}
+          onPersonLastNameChange={this.handleUpdateInformation(
+            'personalInfo',
+            'lastName'
+          )}
+          onPersonEmailAddressChange={this.handleUpdateInformation(
+            'personalInfo',
+            'emailAddress'
+          )}
+          onPersonPhoneNumberChange={this.handleUpdateInformation(
+            'personalInfo',
+            'phoneNumber'
+          )}
+        />
+      );
+    }
+
+    if (step === 2) {
+      return <EmergencyContact />;
+    }
+
+    if (step === 3) {
+      return <RallyInfo />;
+    }
+  };
+
   render() {
     const { personalInfo, step } = this.state;
     console.log(this.state);
@@ -128,34 +163,7 @@ class NewEmergencyPlan extends Component {
             onSubmit={this.handleSubmit}
             css={{ display: 'grid', gridRowGap: '40px' }}
           >
-            {step === 1 && (
-              <PersonalInfo
-                firstName={personalInfo.firstName}
-                lastName={personalInfo.lastName}
-                emailAddress={personalInfo.emailAddress}
-                phoneNumber={personalInfo.phoneNumber}
-                onPersonFirstNameChange={this.handleUpdateInformation(
-                  'personalInfo',
-                  'firstName'
-                )}
-                onPersonLastNameChange={this.handleUpdateInformation(
-                  'personalInfo',
-                  'lastName'
-                )}
-                onPersonEmailAddressChange={this.handleUpdateInformation(
-                  'personalInfo',
-                  'emailAddress'
-                )}
-                onPersonPhoneNumberChange={this.handleUpdateInformation(
-                  'personalInfo',
-                  'phoneNumber'
-                )}
-              />
-            )}
-
-            {step === 2 && <EmergencyContact />}
-
-            {step === 3 && <RallyInfo />}
+            {this.renderFormBasedOnStepCount(step)}
 
             <div {...buttonContainer}>
               {!(step === 1) && (

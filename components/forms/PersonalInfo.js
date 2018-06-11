@@ -103,7 +103,7 @@ function PersonalInfo({
               onCityChange={handleUpdateInformation('personalInfo', 'city')}
               onZipCodeChange={handleUpdateInformation(
                 'personalInfo',
-                'zipcode'
+                'zipCode'
               )}
               onStateChange={handleUpdateInformation('personalInfo', 'state')}
               onCountryChange={handleUpdateInformation(
