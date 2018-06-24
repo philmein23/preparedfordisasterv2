@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import NewEmergencyPlan from './NewEmergencyPlan';
 import Address from './Address';
+import Input from './form-fields/Input';
 
 import { createElement } from 'glamor/react';
 import { css } from 'glamor';
@@ -48,47 +49,45 @@ function PersonalInfo({
               </div>
               <div className="form-field-container">
                 <div>
-                  <label htmlFor="first-name">First Name</label>
-                  <input
-                    id="first-name"
+                  <Input
                     type="text"
+                    for="first-name"
+                    id="first-name"
+                    label="First Name"
                     name="firstName"
-                    placeholder="First Name"
+                    placeholder="First Name..."
                     value={firstName}
                     onChange={onPersonFirstNameChange}
                   />
                 </div>
                 <div>
-                  <label htmlFor="last-name">last Name</label>
-                  <input
-                    id="last-name"
+                  <Input
                     type="text"
+                    for="last-name"
+                    id="last-name"
                     name="lastName"
-                    placeholder="Last Name"
                     value={lastName}
                     onChange={onPersonLastNameChange}
                   />
                 </div>
                 <div>
-                  <label htmlFor="email-address">Email Address</label>
-                  <input
-                    id="email-address"
+                  <Input
                     type="text"
+                    for="email-address"
+                    id="email-address"
                     name="emailAddress"
-                    placeholder="Email Address"
                     value={emailAddress}
                     onChange={onPersonEmailAddressChange}
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone-number">Phone Number</label>
-                  <input
-                    id="phone-number"
+                  <Input
                     type="text"
+                    for="phone-number"
+                    id="phone-number"
                     name="phoneNumber"
-                    placeholder="Phone Number"
                     value={phoneNumber}
-                    onChange={onPersonPhoneNumberChange}
+                    onChange={onPersonEmailAddressChange}
                   />
                 </div>
               </div>

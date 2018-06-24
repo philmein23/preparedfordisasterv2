@@ -20,7 +20,8 @@ const formContainer = css({
   width: '40vw',
   padding: '20px 40px',
   borderRadius: '10px',
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  boxShadow: '0 2px 6px hsla(0, 0%, 0%, 0.2)'
 });
 
 const buttonContainer = css({
@@ -82,7 +83,7 @@ class NewEmergencyPlan extends Component {
     const { step } = this.state;
 
     this.setState(() => ({
-      step: step <= 4 ? step - 1 : 1
+      step: step <= 4 && step > 0 ? step - 1 : 1
     }));
   };
 

@@ -10,7 +10,8 @@ import NewEmergencyPlan from './NewEmergencyPlan';
 const stepLabel = css({
   textTransform: 'uppercase',
   fontWeight: 'bold',
-  letterSpacing: '1px'
+  letterSpacing: '1px',
+  lineHeight: '1.2'
 });
 
 function EmergencyContact() {
@@ -24,6 +25,15 @@ function EmergencyContact() {
               <span>Step 2</span>
               <span> - </span>
               <span>Emergency Contact Information</span>
+              <p
+                css={{
+                  fontWeight: 'lighter',
+                  fontSize: '9px',
+                  letterSpacing: '1px'
+                }}
+              >
+                Please enter your emergency contact's information
+              </p>
             </div>
             <div className="form-field-container">
               <div>

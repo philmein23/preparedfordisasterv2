@@ -28225,7 +28225,67 @@ function Address(_ref) {
 }
 
 exports.default = Address;
-},{"react":6,"glamor/react":31,"glamor":30}],32:[function(require,module,exports) {
+},{"react":6,"glamor/react":31,"glamor":30}],135:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/form-fields/Input.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function Input(_ref) {
+  var name = _ref.name,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      error = _ref.error,
+      props = _objectWithoutProperties(_ref, ['name', 'value', 'onChange', 'error']);
+
+  console.log(props, 'props');
+  return _react2.default.createElement(
+    _react.Fragment,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    },
+    _react2.default.createElement(
+      'label',
+      { htmlFor: props.for, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: this
+      },
+      props.label
+    ),
+    _react2.default.createElement('input', {
+      type: props.type,
+      id: props.id,
+      name: name,
+      value: value,
+      onChange: onChange,
+      placeholder: props.placeholder,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    })
+  );
+}
+
+exports.default = Input;
+},{"react":6}],32:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28247,6 +28307,10 @@ var _NewEmergencyPlan2 = _interopRequireDefault(_NewEmergencyPlan);
 var _Address = require('./Address');
 
 var _Address2 = _interopRequireDefault(_Address);
+
+var _Input = require('./form-fields/Input');
+
+var _Input2 = _interopRequireDefault(_Input);
 
 var _react3 = require('glamor/react');
 
@@ -28283,7 +28347,7 @@ function PersonalInfo(_ref) {
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 29
       },
       __self: this
     },
@@ -28302,7 +28366,7 @@ function PersonalInfo(_ref) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 40
           },
           __self: _this
         },
@@ -28311,7 +28375,7 @@ function PersonalInfo(_ref) {
           _extends({}, stepLabel, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 40
+              lineNumber: 41
             },
             __self: _this
           }),
@@ -28320,7 +28384,7 @@ function PersonalInfo(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 41
+                lineNumber: 42
               },
               __self: _this
             },
@@ -28331,7 +28395,7 @@ function PersonalInfo(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 42
+                lineNumber: 43
               },
               __self: _this
             },
@@ -28342,7 +28406,7 @@ function PersonalInfo(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 43
+                lineNumber: 44
               },
               __self: _this
             },
@@ -28354,7 +28418,7 @@ function PersonalInfo(_ref) {
           _extends({}, formGrid, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 45
+              lineNumber: 46
             },
             __self: _this
           }),
@@ -28362,7 +28426,7 @@ function PersonalInfo(_ref) {
             'div',
             { css: { alignSelf: 'center' }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 46
+                lineNumber: 47
               },
               __self: _this
             },
@@ -28371,7 +28435,7 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 47
+                  lineNumber: 48
                 },
                 __self: _this
               },
@@ -28382,7 +28446,7 @@ function PersonalInfo(_ref) {
             'div',
             { className: 'form-field-container', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 49
+                lineNumber: 50
               },
               __self: _this
             },
@@ -28391,25 +28455,17 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 50
+                  lineNumber: 51
                 },
                 __self: _this
               },
-              (0, _react3.createElement)(
-                'label',
-                { htmlFor: 'first-name', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 51
-                  },
-                  __self: _this
-                },
-                'First Name'
-              ),
-              (0, _react3.createElement)('input', {
-                id: 'first-name',
+              (0, _react3.createElement)(_Input2.default, {
                 type: 'text',
+                'for': 'first-name',
+                id: 'first-name',
+                label: 'First Name',
                 name: 'firstName',
-                placeholder: 'First Name',
+                placeholder: 'First Name...',
                 value: firstName,
                 onChange: onPersonFirstNameChange,
                 __source: {
@@ -28424,30 +28480,20 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 61
+                  lineNumber: 63
                 },
                 __self: _this
               },
-              (0, _react3.createElement)(
-                'label',
-                { htmlFor: 'last-name', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 62
-                  },
-                  __self: _this
-                },
-                'last Name'
-              ),
-              (0, _react3.createElement)('input', {
-                id: 'last-name',
+              (0, _react3.createElement)(_Input2.default, {
                 type: 'text',
+                'for': 'last-name',
+                id: 'last-name',
                 name: 'lastName',
-                placeholder: 'Last Name',
                 value: lastName,
                 onChange: onPersonLastNameChange,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 63
+                  lineNumber: 64
                 },
                 __self: _this
               })
@@ -28457,25 +28503,15 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 72
+                  lineNumber: 73
                 },
                 __self: _this
               },
-              (0, _react3.createElement)(
-                'label',
-                { htmlFor: 'email-address', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 73
-                  },
-                  __self: _this
-                },
-                'Email Address'
-              ),
-              (0, _react3.createElement)('input', {
-                id: 'email-address',
+              (0, _react3.createElement)(_Input2.default, {
                 type: 'text',
+                'for': 'email-address',
+                id: 'email-address',
                 name: 'emailAddress',
-                placeholder: 'Email Address',
                 value: emailAddress,
                 onChange: onPersonEmailAddressChange,
                 __source: {
@@ -28494,26 +28530,16 @@ function PersonalInfo(_ref) {
                 },
                 __self: _this
               },
-              (0, _react3.createElement)(
-                'label',
-                { htmlFor: 'phone-number', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 84
-                  },
-                  __self: _this
-                },
-                'Phone Number'
-              ),
-              (0, _react3.createElement)('input', {
-                id: 'phone-number',
+              (0, _react3.createElement)(_Input2.default, {
                 type: 'text',
+                'for': 'phone-number',
+                id: 'phone-number',
                 name: 'phoneNumber',
-                placeholder: 'Phone Number',
                 value: phoneNumber,
-                onChange: onPersonPhoneNumberChange,
+                onChange: onPersonEmailAddressChange,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 85
+                  lineNumber: 84
                 },
                 __self: _this
               })
@@ -28528,7 +28554,7 @@ function PersonalInfo(_ref) {
           onCountryChange: handleUpdateInformation('personalInfo', 'country'),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97
+            lineNumber: 96
           },
           __self: _this
         }))
@@ -28538,7 +28564,7 @@ function PersonalInfo(_ref) {
 }
 
 exports.default = PersonalInfo;
-},{"react":6,"./NewEmergencyPlan":14,"./Address":43,"glamor/react":31,"glamor":30}],125:[function(require,module,exports) {
+},{"react":6,"./NewEmergencyPlan":14,"./Address":43,"./form-fields/Input":135,"glamor/react":31,"glamor":30}],125:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28574,7 +28600,8 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 var stepLabel = (0, _glamor.css)({
   textTransform: 'uppercase',
   fontWeight: 'bold',
-  letterSpacing: '1px'
+  letterSpacing: '1px',
+  lineHeight: '1.2'
 });
 
 function EmergencyContact() {
@@ -28585,7 +28612,7 @@ function EmergencyContact() {
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 19
       },
       __self: this
     },
@@ -28602,7 +28629,7 @@ function EmergencyContact() {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 23
           },
           __self: _this
         },
@@ -28611,7 +28638,7 @@ function EmergencyContact() {
           _extends({}, stepLabel, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 23
+              lineNumber: 24
             },
             __self: _this
           }),
@@ -28620,7 +28647,7 @@ function EmergencyContact() {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 24
+                lineNumber: 25
               },
               __self: _this
             },
@@ -28631,7 +28658,7 @@ function EmergencyContact() {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 25
+                lineNumber: 26
               },
               __self: _this
             },
@@ -28642,18 +28669,34 @@ function EmergencyContact() {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 26
+                lineNumber: 27
               },
               __self: _this
             },
             'Emergency Contact Information'
+          ),
+          (0, _react3.createElement)(
+            'p',
+            {
+              css: {
+                fontWeight: 'lighter',
+                fontSize: '9px',
+                letterSpacing: '1px'
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 28
+              },
+              __self: _this
+            },
+            'Please enter your emergency contact\'s information'
           )
         ),
         (0, _react3.createElement)(
           'div',
           { className: 'form-field-container', __source: {
               fileName: _jsxFileName,
-              lineNumber: 28
+              lineNumber: 38
             },
             __self: _this
           },
@@ -28662,7 +28705,7 @@ function EmergencyContact() {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 29
+                lineNumber: 39
               },
               __self: _this
             },
@@ -28670,7 +28713,7 @@ function EmergencyContact() {
               'label',
               { htmlFor: 'first-name', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 30
+                  lineNumber: 40
                 },
                 __self: _this
               },
@@ -28685,7 +28728,7 @@ function EmergencyContact() {
               onChange: handleUpdateInformation('emergencyContact', 'firstName'),
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 31
+                lineNumber: 41
               },
               __self: _this
             })
@@ -28695,7 +28738,7 @@ function EmergencyContact() {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 43
+                lineNumber: 53
               },
               __self: _this
             },
@@ -28703,7 +28746,7 @@ function EmergencyContact() {
               'label',
               { htmlFor: 'last-name', __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 44
+                  lineNumber: 54
                 },
                 __self: _this
               },
@@ -28718,7 +28761,7 @@ function EmergencyContact() {
               onChange: handleUpdateInformation('emergencyContact', 'lastName'),
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 45
+                lineNumber: 55
               },
               __self: _this
             })
@@ -28729,14 +28772,14 @@ function EmergencyContact() {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 58
+              lineNumber: 68
             },
             __self: _this
           },
           (0, _react3.createElement)(_Address2.default, _extends({}, address, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 69
             },
             __self: _this
           }))
@@ -28892,7 +28935,8 @@ var formContainer = (0, _glamor.css)({
   width: '40vw',
   padding: '20px 40px',
   borderRadius: '10px',
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  boxShadow: '0 2px 6px hsla(0, 0%, 0%, 0.2)'
 });
 
 var buttonContainer = (0, _glamor.css)({
@@ -28965,7 +29009,7 @@ var NewEmergencyPlan = function (_Component) {
 
       _this.setState(function () {
         return {
-          step: step <= 4 ? step - 1 : 1
+          step: step <= 4 && step > 0 ? step - 1 : 1
         };
       });
     }, _this.state = {
@@ -28995,7 +29039,7 @@ var NewEmergencyPlan = function (_Component) {
           onPersonPhoneNumberChange: _this.handleUpdateInformation('personalInfo', 'phoneNumber'),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 126
+            lineNumber: 127
           },
           __self: _this2
         });
@@ -29005,7 +29049,7 @@ var NewEmergencyPlan = function (_Component) {
         return (0, _react3.createElement)(_EmergencyContact2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 148
+            lineNumber: 149
           },
           __self: _this2
         });
@@ -29015,7 +29059,7 @@ var NewEmergencyPlan = function (_Component) {
         return (0, _react3.createElement)(_RallyInfo2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 152
+            lineNumber: 153
           },
           __self: _this2
         });
@@ -29035,7 +29079,7 @@ var NewEmergencyPlan = function (_Component) {
         NewPlanContext.Provider,
         { value: this.state, __source: {
             fileName: _jsxFileName,
-            lineNumber: 160
+            lineNumber: 161
           },
           __self: this
         },
@@ -29044,7 +29088,7 @@ var NewEmergencyPlan = function (_Component) {
           _extends({}, formContainer, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 161
+              lineNumber: 162
             },
             __self: this
           }),
@@ -29055,7 +29099,7 @@ var NewEmergencyPlan = function (_Component) {
               css: { display: 'grid', gridRowGap: '40px' },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 162
+                lineNumber: 163
               },
               __self: this
             },
@@ -29065,7 +29109,7 @@ var NewEmergencyPlan = function (_Component) {
               _extends({}, buttonContainer, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 168
+                  lineNumber: 169
                 },
                 __self: this
               }),
@@ -29073,7 +29117,7 @@ var NewEmergencyPlan = function (_Component) {
                 'button',
                 _extends({}, back, { onClick: this.returnPreviousStep, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 170
+                    lineNumber: 171
                   },
                   __self: this
                 }),
@@ -29083,7 +29127,7 @@ var NewEmergencyPlan = function (_Component) {
                 'button',
                 _extends({}, submit, { type: 'submit', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 174
+                    lineNumber: 175
                   },
                   __self: this
                 }),
@@ -29263,7 +29307,7 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, {
   },
   __self: undefined
 }), document.getElementById('app'));
-},{"react":6,"react-dom":7,"./components/App":4}],132:[function(require,module,exports) {
+},{"react":6,"react-dom":7,"./components/App":4}],136:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -29433,5 +29477,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[132,3], null)
+},{}]},{},[136,3], null)
 //# sourceMappingURL=/prepared_for_disaster_v2.5fe5b813.map
