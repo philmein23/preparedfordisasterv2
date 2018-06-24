@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Input from './form-fields/Input';
 
 import { createElement } from 'glamor/react';
 import { css } from 'glamor';
@@ -12,20 +13,14 @@ const formGrid = css({
 
 function Address({
   address1,
-  address2,
   city,
-  state,
   zipCode,
+  state,
   country,
-  ...handlers
+  onChange,
+  category
 }) {
-  const {
-    onAddressChange,
-    onCityChange,
-    onCountryChange,
-    onStateChange,
-    onZipCodeChange
-  } = handlers;
+  console.log(address1, city, onChange, category);
   return (
     <Fragment>
       <div {...formGrid}>
@@ -34,31 +29,56 @@ function Address({
         </div>
         <div className="form-field-container">
           <div>
-            <label htmlFor="address-line-1">Address Line 1</label>
-            <input
+            <Input
+              type="text"
+              label="Address"
+              for="address-line-1"
               id="address-line-1"
+              name="address1"
               value={address1}
-              onChange={onAddressChange}
+              onChange={onChange(category, 'address1')}
             />
           </div>
           <div>
-            <label htmlFor="city">City</label>
-            <input id="city" value={city} onChange={onCityChange} />
+            <Input
+              type="text"
+              for="city"
+              label="city"
+              id="id"
+              value={city}
+              name="city"
+              onChange={onChange(category, 'city')}
+            />
           </div>
           <div>
-            <label htmlFor="zip-code">Zip Code</label>
-            <input id="zip-code" value={zipCode} onChange={onZipCodeChange} />
+            <Input
+              type="text"
+              label="Zip Code"
+              for="zip-code"
+              id="zip-code"
+              name="zipCode"
+              value={zipCode}
+              onChange={onChange(category, 'zipCode')}
+            />
           </div>
           <div>
             <label htmlFor="state">State</label>
-            <select id="state" value={state} onChange={onStateChange}>
+            <select
+              id="state"
+              value={state}
+              onChange={onChange(category, 'state')}
+            >
               <option>Select State</option>
               <option />
             </select>
           </div>
           <div>
             <label htmlFor="country">Country</label>
-            <select id="country" value={country} onChange={onCountryChange}>
+            <select
+              id="country"
+              value={country}
+              onChange={onChange(category, 'country')}
+            >
               <option>Select Country</option>
               <option />
             </select>

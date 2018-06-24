@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Address from './Address';
 
 import { createElement } from 'glamor/react';
 import { css } from 'glamor';
@@ -10,7 +11,7 @@ const stepLabel = css({
   letterSpacing: '1px'
 });
 
-function RallyInfo() {
+function RallyInfo(rallyInfo) {
   return (
     <Fragment>
       <div {...stepLabel}>
@@ -18,7 +19,7 @@ function RallyInfo() {
         <span> - </span>
         <span>Rally Location</span>
       </div>
-      Rally Information
+      <Address {...rallyInfo} />
     </Fragment>
   );
 }

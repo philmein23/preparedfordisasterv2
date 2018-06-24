@@ -98,7 +98,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({50:[function(require,module,exports) {
+})({53:[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -189,7 +189,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 	return to;
 };
-},{}],70:[function(require,module,exports) {
+},{}],75:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -243,7 +243,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-},{}],71:[function(require,module,exports) {
+},{}],73:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -261,7 +261,7 @@ if ('development' !== 'production') {
 }
 
 module.exports = emptyObject;
-},{}],73:[function(require,module,exports) {
+},{}],74:[function(require,module,exports) {
 "use strict";
 
 /**
@@ -361,7 +361,7 @@ if ('development' !== 'production') {
 }
 
 module.exports = warning;
-},{"./emptyFunction":73}],69:[function(require,module,exports) {
+},{"./emptyFunction":74}],76:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -375,7 +375,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
-},{}],68:[function(require,module,exports) {
+},{}],71:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -435,7 +435,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 }
 
 module.exports = checkPropTypes;
-},{"fbjs/lib/invariant":70,"fbjs/lib/warning":72,"./lib/ReactPropTypesSecret":69}],8:[function(require,module,exports) {
+},{"fbjs/lib/invariant":75,"fbjs/lib/warning":72,"./lib/ReactPropTypesSecret":76}],8:[function(require,module,exports) {
 /** @license React v16.4.0
  * react.development.js
  *
@@ -1904,7 +1904,7 @@ if ('development' !== "production") {
     module.exports = react;
   })();
 }
-},{"object-assign":50,"fbjs/lib/invariant":70,"fbjs/lib/emptyObject":71,"fbjs/lib/warning":72,"fbjs/lib/emptyFunction":73,"prop-types/checkPropTypes":68}],6:[function(require,module,exports) {
+},{"object-assign":53,"fbjs/lib/invariant":75,"fbjs/lib/emptyObject":73,"fbjs/lib/warning":72,"fbjs/lib/emptyFunction":74,"prop-types/checkPropTypes":71}],6:[function(require,module,exports) {
 'use strict';
 
 if ('development' === 'production') {
@@ -1912,7 +1912,7 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react.development.js');
 }
-},{"./cjs/react.development.js":8}],105:[function(require,module,exports) {
+},{"./cjs/react.development.js":8}],108:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1946,7 +1946,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],106:[function(require,module,exports) {
+},{}],109:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1983,7 +1983,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],107:[function(require,module,exports) {
+},{}],110:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2049,7 +2049,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],110:[function(require,module,exports) {
+},{}],113:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2072,7 +2072,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],109:[function(require,module,exports) {
+},{}],112:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2095,7 +2095,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":110}],108:[function(require,module,exports) {
+},{"./isNode":113}],111:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2133,7 +2133,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":109}],101:[function(require,module,exports) {
+},{"./isTextNode":112}],105:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -2164,7 +2164,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],98:[function(require,module,exports) {
+},{}],101:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2201,7 +2201,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":101}],102:[function(require,module,exports) {
+},{"./hyphenate":105}],104:[function(require,module,exports) {
 "use strict";
 
 /**
@@ -2231,7 +2231,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],97:[function(require,module,exports) {
+},{}],100:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -2269,7 +2269,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":102}],13:[function(require,module,exports) {
+},{"./camelize":104}],9:[function(require,module,exports) {
 /** @license React v16.4.0
  * react-dom.development.js
  *
@@ -19551,7 +19551,7 @@ if ('development' !== "production") {
     module.exports = reactDom;
   })();
 }
-},{"fbjs/lib/invariant":70,"react":6,"fbjs/lib/warning":72,"fbjs/lib/ExecutionEnvironment":105,"object-assign":50,"fbjs/lib/emptyFunction":73,"prop-types/checkPropTypes":68,"fbjs/lib/getActiveElement":106,"fbjs/lib/shallowEqual":107,"fbjs/lib/containsNode":108,"fbjs/lib/emptyObject":71,"fbjs/lib/hyphenateStyleName":98,"fbjs/lib/camelizeStyleName":97}],7:[function(require,module,exports) {
+},{"fbjs/lib/invariant":75,"react":6,"fbjs/lib/warning":72,"fbjs/lib/ExecutionEnvironment":108,"object-assign":53,"fbjs/lib/emptyFunction":74,"prop-types/checkPropTypes":71,"fbjs/lib/getActiveElement":109,"fbjs/lib/shallowEqual":110,"fbjs/lib/containsNode":111,"fbjs/lib/emptyObject":73,"fbjs/lib/hyphenateStyleName":101,"fbjs/lib/camelizeStyleName":100}],7:[function(require,module,exports) {
 'use strict';
 
 function checkDCE() {
@@ -19587,7 +19587,7 @@ if ('development' === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":13}],44:[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":9}],46:[function(require,module,exports) {
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -19641,7 +19641,7 @@ if ('development' !== 'production') {
 }
 
 module.exports = warning;
-},{}],49:[function(require,module,exports) {
+},{}],52:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20158,7 +20158,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 
   return ReactPropTypes;
 };
-},{"fbjs/lib/emptyFunction":73,"fbjs/lib/invariant":70,"fbjs/lib/warning":72,"object-assign":50,"./lib/ReactPropTypesSecret":69,"./checkPropTypes":68}],45:[function(require,module,exports) {
+},{"fbjs/lib/emptyFunction":74,"fbjs/lib/invariant":75,"fbjs/lib/warning":72,"object-assign":53,"./lib/ReactPropTypesSecret":76,"./checkPropTypes":71}],47:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20182,7 +20182,7 @@ if ('development' !== 'production') {
   // http://fb.me/prop-types-in-prod
   module.exports = require('./factoryWithThrowingShims')();
 }
-},{"./factoryWithTypeCheckers":49}],48:[function(require,module,exports) {
+},{"./factoryWithTypeCheckers":52}],51:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -20229,7 +20229,7 @@ var invariant = function (condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
-},{}],64:[function(require,module,exports) {
+},{}],67:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20305,7 +20305,7 @@ function resolvePathname(to) {
 }
 
 exports.default = resolvePathname;
-},{}],65:[function(require,module,exports) {
+},{}],68:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -20353,7 +20353,7 @@ function valueEqual(a, b) {
 }
 
 exports.default = valueEqual;
-},{}],56:[function(require,module,exports) {
+},{}],60:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20415,7 +20415,7 @@ var createPath = exports.createPath = function createPath(location) {
 
   return path;
 };
-},{}],55:[function(require,module,exports) {
+},{}],58:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20494,7 +20494,7 @@ var createLocation = exports.createLocation = function createLocation(path, stat
 var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
   return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && (0, _valueEqual2.default)(a.state, b.state);
 };
-},{"resolve-pathname":64,"value-equal":65,"./PathUtils":56}],57:[function(require,module,exports) {
+},{"resolve-pathname":67,"value-equal":68,"./PathUtils":60}],59:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20580,7 +20580,7 @@ var createTransitionManager = function createTransitionManager() {
 };
 
 exports.default = createTransitionManager;
-},{"warning":44}],58:[function(require,module,exports) {
+},{"warning":46}],61:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20636,7 +20636,7 @@ var supportsGoWithoutReloadUsingHash = exports.supportsGoWithoutReloadUsingHash 
 var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
   return event.state === undefined && navigator.userAgent.indexOf('CriOS') === -1;
 };
-},{}],46:[function(require,module,exports) {
+},{}],49:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -20944,7 +20944,7 @@ var createBrowserHistory = function createBrowserHistory() {
 };
 
 exports.default = createBrowserHistory;
-},{"warning":44,"invariant":48,"./LocationUtils":55,"./PathUtils":56,"./createTransitionManager":57,"./DOMUtils":58}],38:[function(require,module,exports) {
+},{"warning":46,"invariant":51,"./LocationUtils":58,"./PathUtils":60,"./createTransitionManager":59,"./DOMUtils":61}],43:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -21087,7 +21087,7 @@ Router.childContextTypes = {
 };
 
 exports.default = Router;
-},{"warning":44,"invariant":48,"react":6,"prop-types":45}],25:[function(require,module,exports) {
+},{"warning":46,"invariant":51,"react":6,"prop-types":47}],25:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21101,7 +21101,7 @@ var _Router2 = _interopRequireDefault(_Router);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Router2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/Router":38}],17:[function(require,module,exports) {
+},{"react-router/es/Router":43}],17:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -21187,7 +21187,7 @@ BrowserRouter.propTypes = {
 };
 
 exports.default = BrowserRouter;
-},{"warning":44,"react":6,"prop-types":45,"history/createBrowserHistory":46,"./Router":25}],47:[function(require,module,exports) {
+},{"warning":46,"react":6,"prop-types":47,"history/createBrowserHistory":49,"./Router":25}],48:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -21512,7 +21512,7 @@ var createHashHistory = function createHashHistory() {
 };
 
 exports.default = createHashHistory;
-},{"warning":44,"invariant":48,"./LocationUtils":55,"./PathUtils":56,"./createTransitionManager":57,"./DOMUtils":58}],18:[function(require,module,exports) {
+},{"warning":46,"invariant":51,"./LocationUtils":58,"./PathUtils":60,"./createTransitionManager":59,"./DOMUtils":61}],18:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -21597,7 +21597,7 @@ HashRouter.propTypes = {
 };
 
 exports.default = HashRouter;
-},{"warning":44,"react":6,"prop-types":45,"history/createHashHistory":47,"./Router":25}],19:[function(require,module,exports) {
+},{"warning":46,"react":6,"prop-types":47,"history/createHashHistory":48,"./Router":25}],19:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -21734,7 +21734,7 @@ Link.contextTypes = {
 };
 
 exports.default = Link;
-},{"react":6,"prop-types":45,"invariant":48}],51:[function(require,module,exports) {
+},{"react":6,"prop-types":47,"invariant":51}],54:[function(require,module,exports) {
 'use strict';
 
 exports.__esModule = true;
@@ -21905,7 +21905,7 @@ var createMemoryHistory = function createMemoryHistory() {
 };
 
 exports.default = createMemoryHistory;
-},{"warning":44,"./PathUtils":56,"./LocationUtils":55,"./createTransitionManager":57}],34:[function(require,module,exports) {
+},{"warning":46,"./PathUtils":60,"./LocationUtils":58,"./createTransitionManager":59}],36:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -21991,7 +21991,7 @@ MemoryRouter.propTypes = {
 };
 
 exports.default = MemoryRouter;
-},{"warning":44,"react":6,"prop-types":45,"history/createMemoryHistory":51,"./Router":38}],20:[function(require,module,exports) {
+},{"warning":46,"react":6,"prop-types":47,"history/createMemoryHistory":54,"./Router":43}],20:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22005,12 +22005,12 @@ var _MemoryRouter2 = _interopRequireDefault(_MemoryRouter);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _MemoryRouter2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/MemoryRouter":34}],66:[function(require,module,exports) {
+},{"react-router/es/MemoryRouter":36}],69:[function(require,module,exports) {
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],54:[function(require,module,exports) {
+},{}],57:[function(require,module,exports) {
 var isarray = require('isarray')
 
 /**
@@ -22438,7 +22438,7 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
 
-},{"isarray":66}],41:[function(require,module,exports) {
+},{"isarray":69}],41:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22518,7 +22518,7 @@ var matchPath = function matchPath(pathname) {
 };
 
 exports.default = matchPath;
-},{"path-to-regexp":54}],37:[function(require,module,exports) {
+},{"path-to-regexp":57}],38:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22694,7 +22694,7 @@ Route.childContextTypes = {
 };
 
 exports.default = Route;
-},{"warning":44,"invariant":48,"react":6,"prop-types":45,"./matchPath":41}],24:[function(require,module,exports) {
+},{"warning":46,"invariant":51,"react":6,"prop-types":47,"./matchPath":41}],24:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22708,7 +22708,7 @@ var _Route2 = _interopRequireDefault(_Route);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Route2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/Route":37}],21:[function(require,module,exports) {
+},{"react-router/es/Route":38}],21:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22813,7 +22813,7 @@ NavLink.defaultProps = {
 };
 
 exports.default = NavLink;
-},{"react":6,"prop-types":45,"./Route":24,"./Link":19}],35:[function(require,module,exports) {
+},{"react":6,"prop-types":47,"./Route":24,"./Link":19}],37:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22920,7 +22920,7 @@ Prompt.contextTypes = {
 };
 
 exports.default = Prompt;
-},{"react":6,"prop-types":45,"invariant":48}],22:[function(require,module,exports) {
+},{"react":6,"prop-types":47,"invariant":51}],22:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22934,7 +22934,7 @@ var _Prompt2 = _interopRequireDefault(_Prompt);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Prompt2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/Prompt":35}],63:[function(require,module,exports) {
+},{"react-router/es/Prompt":37}],66:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22997,7 +22997,7 @@ var createPath = exports.createPath = function createPath(location) {
 
   return path;
 };
-},{}],62:[function(require,module,exports) {
+},{}],65:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23086,7 +23086,7 @@ var createLocation = exports.createLocation = function createLocation(path, stat
 var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a, b) {
   return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && (0, _valueEqual2.default)(a.state, b.state);
 };
-},{"resolve-pathname":64,"value-equal":65,"./PathUtils":63}],67:[function(require,module,exports) {
+},{"resolve-pathname":67,"value-equal":68,"./PathUtils":66}],70:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23174,7 +23174,7 @@ var createTransitionManager = function createTransitionManager() {
 };
 
 exports.default = createTransitionManager;
-},{"warning":44}],74:[function(require,module,exports) {
+},{"warning":46}],77:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23232,7 +23232,7 @@ var supportsGoWithoutReloadUsingHash = exports.supportsGoWithoutReloadUsingHash 
 var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
   return event.state === undefined && navigator.userAgent.indexOf('CriOS') === -1;
 };
-},{}],59:[function(require,module,exports) {
+},{}],62:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23551,7 +23551,7 @@ var createBrowserHistory = function createBrowserHistory() {
 };
 
 exports.default = createBrowserHistory;
-},{"warning":44,"invariant":48,"./LocationUtils":62,"./PathUtils":63,"./createTransitionManager":67,"./DOMUtils":74}],60:[function(require,module,exports) {
+},{"warning":46,"invariant":51,"./LocationUtils":65,"./PathUtils":66,"./createTransitionManager":70,"./DOMUtils":77}],63:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23885,7 +23885,7 @@ var createHashHistory = function createHashHistory() {
 };
 
 exports.default = createHashHistory;
-},{"warning":44,"invariant":48,"./LocationUtils":62,"./PathUtils":63,"./createTransitionManager":67,"./DOMUtils":74}],61:[function(require,module,exports) {
+},{"warning":46,"invariant":51,"./LocationUtils":65,"./PathUtils":66,"./createTransitionManager":70,"./DOMUtils":77}],64:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24069,7 +24069,7 @@ var createMemoryHistory = function createMemoryHistory() {
 };
 
 exports.default = createMemoryHistory;
-},{"warning":44,"./PathUtils":63,"./LocationUtils":62,"./createTransitionManager":67}],52:[function(require,module,exports) {
+},{"warning":46,"./PathUtils":66,"./LocationUtils":65,"./createTransitionManager":70}],55:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24124,7 +24124,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.createBrowserHistory = _createBrowserHistory3.default;
 exports.createHashHistory = _createHashHistory3.default;
 exports.createMemoryHistory = _createMemoryHistory3.default;
-},{"./createBrowserHistory":59,"./createHashHistory":60,"./createMemoryHistory":61,"./LocationUtils":62,"./PathUtils":63}],36:[function(require,module,exports) {
+},{"./createBrowserHistory":62,"./createHashHistory":63,"./createMemoryHistory":64,"./LocationUtils":65,"./PathUtils":66}],39:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24248,7 +24248,7 @@ Redirect.contextTypes = {
 };
 
 exports.default = Redirect;
-},{"react":6,"prop-types":45,"warning":44,"invariant":48,"history":52}],23:[function(require,module,exports) {
+},{"react":6,"prop-types":47,"warning":46,"invariant":51,"history":55}],23:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24262,7 +24262,7 @@ var _Redirect2 = _interopRequireDefault(_Redirect);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Redirect2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/Redirect":36}],40:[function(require,module,exports) {
+},{"react-router/es/Redirect":39}],40:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24474,7 +24474,7 @@ StaticRouter.childContextTypes = {
 };
 
 exports.default = StaticRouter;
-},{"warning":44,"invariant":48,"react":6,"prop-types":45,"history/PathUtils":56,"./Router":38}],26:[function(require,module,exports) {
+},{"warning":46,"invariant":51,"react":6,"prop-types":47,"history/PathUtils":60,"./Router":43}],26:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24488,7 +24488,7 @@ var _StaticRouter2 = _interopRequireDefault(_StaticRouter);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _StaticRouter2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/StaticRouter":40}],39:[function(require,module,exports) {
+},{"react-router/es/StaticRouter":40}],42:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24601,7 +24601,7 @@ Switch.propTypes = {
 };
 
 exports.default = Switch;
-},{"react":6,"prop-types":45,"warning":44,"invariant":48,"./matchPath":41}],27:[function(require,module,exports) {
+},{"react":6,"prop-types":47,"warning":46,"invariant":51,"./matchPath":41}],27:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24615,7 +24615,7 @@ var _Switch2 = _interopRequireDefault(_Switch);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Switch2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/Switch":39}],28:[function(require,module,exports) {
+},{"react-router/es/Switch":42}],28:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24629,7 +24629,7 @@ var _matchPath2 = _interopRequireDefault(_matchPath);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _matchPath2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/matchPath":41}],53:[function(require,module,exports) {
+},{"react-router/es/matchPath":41}],56:[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**
@@ -24705,7 +24705,7 @@ var global = arguments[3];
     };
 })));
 
-},{}],42:[function(require,module,exports) {
+},{}],44:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24769,7 +24769,7 @@ var withRouter = function withRouter(Component) {
 };
 
 exports.default = withRouter;
-},{"react":6,"prop-types":45,"hoist-non-react-statics":53,"./Route":37}],29:[function(require,module,exports) {
+},{"react":6,"prop-types":47,"hoist-non-react-statics":56,"./Route":38}],29:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24783,7 +24783,7 @@ var _withRouter2 = _interopRequireDefault(_withRouter);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _withRouter2.default; // Written in this round about way for babel-transform-imports
-},{"react-router/es/withRouter":42}],15:[function(require,module,exports) {
+},{"react-router/es/withRouter":44}],15:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24858,7 +24858,7 @@ exports.StaticRouter = _StaticRouter3.default;
 exports.Switch = _Switch3.default;
 exports.matchPath = _matchPath3.default;
 exports.withRouter = _withRouter3.default;
-},{"./BrowserRouter":17,"./HashRouter":18,"./Link":19,"./MemoryRouter":20,"./NavLink":21,"./Prompt":22,"./Redirect":23,"./Route":24,"./Router":25,"./StaticRouter":26,"./Switch":27,"./matchPath":28,"./withRouter":29}],9:[function(require,module,exports) {
+},{"./BrowserRouter":17,"./HashRouter":18,"./Link":19,"./MemoryRouter":20,"./NavLink":21,"./Prompt":22,"./Redirect":23,"./Route":24,"./Router":25,"./StaticRouter":26,"./Switch":27,"./matchPath":28,"./withRouter":29}],10:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24910,7 +24910,7 @@ var Home = function (_Component) {
 }(_react.Component);
 
 exports.default = Home;
-},{"react":6}],75:[function(require,module,exports) {
+},{"react":6}],78:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25153,7 +25153,7 @@ function StyleSheet() {
     return arr;
   }
 });
-},{"object-assign":50}],103:[function(require,module,exports) {
+},{"object-assign":53}],106:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25308,7 +25308,7 @@ var CSSProperty = {
 };
 
 exports.default = CSSProperty;
-},{}],95:[function(require,module,exports) {
+},{}],98:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25401,7 +25401,7 @@ function dangerousStyleValue(name, value, component) {
 }
 
 exports.default = dangerousStyleValue;
-},{"./CSSProperty":103,"fbjs/lib/warning":72}],99:[function(require,module,exports) {
+},{"./CSSProperty":106,"fbjs/lib/warning":72}],102:[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -25429,7 +25429,7 @@ function memoizeStringOnly(callback) {
 }
 
 module.exports = memoizeStringOnly;
-},{}],80:[function(require,module,exports) {
+},{}],83:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25594,7 +25594,7 @@ function createMarkupForStyles(styles, component) {
   }
   return serialized || null;
 }
-},{"fbjs/lib/camelizeStyleName":97,"./dangerousStyleValue":95,"fbjs/lib/hyphenateStyleName":98,"fbjs/lib/memoizeStringOnly":99,"fbjs/lib/warning":72}],76:[function(require,module,exports) {
+},{"fbjs/lib/camelizeStyleName":100,"./dangerousStyleValue":98,"fbjs/lib/hyphenateStyleName":101,"fbjs/lib/memoizeStringOnly":102,"fbjs/lib/warning":72}],79:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25649,7 +25649,7 @@ function cleanArray(rules) {
 function clean(input) {
   return Array.isArray(input) ? cleanArray(input) : cleanObject(input);
 }
-},{}],81:[function(require,module,exports) {
+},{}],84:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25668,7 +25668,7 @@ exports.default = {
   prefixMap: { "appearance": wm, "userSelect": wmms, "textEmphasisPosition": w, "textEmphasis": w, "textEmphasisStyle": w, "textEmphasisColor": w, "boxDecorationBreak": w, "clipPath": w, "maskImage": w, "maskMode": w, "maskRepeat": w, "maskPosition": w, "maskClip": w, "maskOrigin": w, "maskSize": w, "maskComposite": w, "mask": w, "maskBorderSource": w, "maskBorderMode": w, "maskBorderSlice": w, "maskBorderWidth": w, "maskBorderOutset": w, "maskBorderRepeat": w, "maskBorder": w, "maskType": w, "textDecorationStyle": w, "textDecorationSkip": w, "textDecorationLine": w, "textDecorationColor": w, "filter": w, "fontFeatureSettings": w, "breakAfter": wmms, "breakBefore": wmms, "breakInside": wmms, "columnCount": wm, "columnFill": wm, "columnGap": wm, "columnRule": wm, "columnRuleColor": wm, "columnRuleStyle": wm, "columnRuleWidth": wm, "columns": wm, "columnSpan": wm, "columnWidth": wm, "writingMode": wms, "flex": w, "flexBasis": w, "flexDirection": w, "flexGrow": w, "flexFlow": w, "flexShrink": w, "flexWrap": w, "alignContent": w, "alignItems": w, "alignSelf": w, "justifyContent": w, "order": w, "transform": w, "transformOrigin": w, "transformOriginX": w, "transformOriginY": w, "backfaceVisibility": w, "perspective": w, "perspectiveOrigin": w, "transformStyle": w, "transformOriginZ": w, "animation": w, "animationDelay": w, "animationDirection": w, "animationFillMode": w, "animationDuration": w, "animationIterationCount": w, "animationName": w, "animationPlayState": w, "animationTimingFunction": w, "backdropFilter": w, "fontKerning": w, "scrollSnapType": wms, "scrollSnapPointsX": wms, "scrollSnapPointsY": wms, "scrollSnapDestination": wms, "scrollSnapCoordinate": wms, "shapeImageThreshold": w, "shapeImageMargin": w, "shapeImageOutside": w, "hyphens": wmms, "flowInto": wms, "flowFrom": wms, "regionFragment": wms, "textAlignLast": m, "tabSize": m, "wrapFlow": ms, "wrapThrough": ms, "wrapMargin": ms, "gridTemplateColumns": ms, "gridTemplateRows": ms, "gridTemplateAreas": ms, "gridTemplate": ms, "gridAutoColumns": ms, "gridAutoRows": ms, "gridAutoFlow": ms, "grid": ms, "gridRowStart": ms, "gridColumnStart": ms, "gridRowEnd": ms, "gridRow": ms, "gridColumn": ms, "gridColumnEnd": ms, "gridColumnGap": ms, "gridRowGap": ms, "gridArea": ms, "gridGap": ms, "textSizeAdjust": wms, "borderImage": w, "borderImageOutset": w, "borderImageRepeat": w, "borderImageSlice": w, "borderImageSource": w, "borderImageWidth": w, "transitionDelay": w, "transitionDuration": w, "transitionProperty": w, "transitionTimingFunction": w }
 };
 module.exports = exports["default"];
-},{}],94:[function(require,module,exports) {
+},{}],97:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25679,7 +25679,7 @@ function capitalizeString(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 module.exports = exports["default"];
-},{}],82:[function(require,module,exports) {
+},{}],86:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25702,7 +25702,7 @@ function prefixProperty(prefixProperties, property, style) {
   }
 }
 module.exports = exports['default'];
-},{"./capitalizeString":94}],83:[function(require,module,exports) {
+},{"./capitalizeString":97}],87:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25745,7 +25745,7 @@ function cursor(property, value) {
   }
 }
 module.exports = exports['default'];
-},{}],96:[function(require,module,exports) {
+},{}],99:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25758,7 +25758,7 @@ function isPrefixedValue(value) {
   return typeof value === 'string' && regex.test(value);
 }
 module.exports = exports['default'];
-},{}],84:[function(require,module,exports) {
+},{}],88:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25782,7 +25782,7 @@ function crossFade(property, value) {
   }
 }
 module.exports = exports['default'];
-},{"css-in-js-utils/lib/isPrefixedValue":96}],86:[function(require,module,exports) {
+},{"css-in-js-utils/lib/isPrefixedValue":99}],89:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25806,7 +25806,7 @@ function filter(property, value) {
   }
 }
 module.exports = exports['default'];
-},{"css-in-js-utils/lib/isPrefixedValue":96}],87:[function(require,module,exports) {
+},{"css-in-js-utils/lib/isPrefixedValue":99}],90:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25824,7 +25824,7 @@ function flex(property, value) {
   }
 }
 module.exports = exports['default'];
-},{}],88:[function(require,module,exports) {
+},{}],91:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25864,7 +25864,7 @@ function flexboxOld(property, value, style) {
   }
 }
 module.exports = exports['default'];
-},{}],89:[function(require,module,exports) {
+},{}],92:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25890,7 +25890,7 @@ function gradient(property, value) {
   }
 }
 module.exports = exports['default'];
-},{"css-in-js-utils/lib/isPrefixedValue":96}],90:[function(require,module,exports) {
+},{"css-in-js-utils/lib/isPrefixedValue":99}],93:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25914,7 +25914,7 @@ function imageSet(property, value) {
   }
 }
 module.exports = exports['default'];
-},{"css-in-js-utils/lib/isPrefixedValue":96}],91:[function(require,module,exports) {
+},{"css-in-js-utils/lib/isPrefixedValue":99}],94:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25927,7 +25927,7 @@ function position(property, value) {
   }
 }
 module.exports = exports['default'];
-},{}],92:[function(require,module,exports) {
+},{}],95:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25961,7 +25961,7 @@ function sizing(property, value) {
   }
 }
 module.exports = exports['default'];
-},{}],104:[function(require,module,exports) {
+},{}],107:[function(require,module,exports) {
 'use strict';
 
 var uppercasePattern = /[A-Z]/g;
@@ -25979,7 +25979,7 @@ function hyphenateStyleName(string) {
 
 module.exports = hyphenateStyleName;
 
-},{}],100:[function(require,module,exports) {
+},{}],103:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25997,7 +25997,7 @@ function hyphenateProperty(property) {
   return (0, _hyphenateStyleName2.default)(property);
 }
 module.exports = exports['default'];
-},{"hyphenate-style-name":104}],93:[function(require,module,exports) {
+},{"hyphenate-style-name":107}],96:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26091,7 +26091,7 @@ function transition(property, value, style, propertyPrefixMap) {
   }
 }
 module.exports = exports['default'];
-},{"css-in-js-utils/lib/hyphenateProperty":100,"css-in-js-utils/lib/isPrefixedValue":96,"../../utils/capitalizeString":94}],79:[function(require,module,exports) {
+},{"css-in-js-utils/lib/hyphenateProperty":103,"css-in-js-utils/lib/isPrefixedValue":99,"../../utils/capitalizeString":97}],82:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26173,7 +26173,7 @@ function prefixer(style) {
   }
   return style;
 }
-},{"inline-style-prefixer/static/staticData":81,"inline-style-prefixer/utils/prefixProperty":82,"inline-style-prefixer/utils/prefixValue":83,"inline-style-prefixer/static/plugins/cursor":85,"inline-style-prefixer/static/plugins/crossFade":84,"inline-style-prefixer/static/plugins/filter":86,"inline-style-prefixer/static/plugins/flex":87,"inline-style-prefixer/static/plugins/flexboxOld":88,"inline-style-prefixer/static/plugins/gradient":89,"inline-style-prefixer/static/plugins/imageSet":90,"inline-style-prefixer/static/plugins/position":91,"inline-style-prefixer/static/plugins/sizing":92,"inline-style-prefixer/static/plugins/transition":93}],77:[function(require,module,exports) {
+},{"inline-style-prefixer/static/staticData":84,"inline-style-prefixer/utils/prefixProperty":86,"inline-style-prefixer/utils/prefixValue":87,"inline-style-prefixer/static/plugins/cursor":85,"inline-style-prefixer/static/plugins/crossFade":88,"inline-style-prefixer/static/plugins/filter":89,"inline-style-prefixer/static/plugins/flex":90,"inline-style-prefixer/static/plugins/flexboxOld":91,"inline-style-prefixer/static/plugins/gradient":92,"inline-style-prefixer/static/plugins/imageSet":93,"inline-style-prefixer/static/plugins/position":94,"inline-style-prefixer/static/plugins/sizing":95,"inline-style-prefixer/static/plugins/transition":96}],80:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26290,7 +26290,7 @@ function contentWrap(node) {
 function prefixes(node) {
   return (0, _objectAssign2.default)({}, node, { style: (0, _prefixer2.default)(_extends({}, node.style)) });
 }
-},{"object-assign":50,"./CSSPropertyOperations":80,"./prefixer":79}],78:[function(require,module,exports) {
+},{"object-assign":53,"./CSSPropertyOperations":83,"./prefixer":82}],81:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27388,7 +27388,7 @@ function attribsFor() {
 
   return htmlAttributes;
 }
-},{"object-assign":50,"./sheet.js":75,"./CSSPropertyOperations":80,"./clean.js":76,"./plugins":77,"./hash":78}],33:[function(require,module,exports) {
+},{"object-assign":53,"./sheet.js":78,"./CSSPropertyOperations":83,"./clean.js":79,"./plugins":80,"./hash":81}],35:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27603,10 +27603,10 @@ function propMerge(mergeStyle, props) {
 
   return _extends({}, restProps, mergedStyles);
 }
-},{"./index.js":30,"object-assign":50,"prop-types":45,"react":6}],31:[function(require,module,exports) {
+},{"./index.js":30,"object-assign":53,"prop-types":47,"react":6}],31:[function(require,module,exports) {
 module.exports = require('./lib/react.js')
 
-},{"./lib/react.js":33}],10:[function(require,module,exports) {
+},{"./lib/react.js":35}],11:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27733,7 +27733,7 @@ function Navbar() {
     )
   );
 }
-},{"react":6,"react-router-dom":15,"glamor/react":31,"glamor":30}],11:[function(require,module,exports) {
+},{"react":6,"react-router-dom":15,"glamor/react":31,"glamor":30}],12:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27922,7 +27922,7 @@ function Login(_ref) {
 }
 
 exports.default = Login;
-},{"react":6,"react-router-dom":15,"glamor/react":31,"glamor":30}],12:[function(require,module,exports) {
+},{"react":6,"react-router-dom":15,"glamor/react":31,"glamor":30}],13:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27951,7 +27951,7 @@ function Register() {
 }
 
 exports.default = Register;
-},{"react":6}],43:[function(require,module,exports) {
+},{"react":6}],121:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27960,7 +27960,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/Address.js';
+var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/form-fields/Form.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
 
@@ -27972,260 +27974,197 @@ var _glamor = require('glamor');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /* @jsx createElement */
 
-var formGrid = (0, _glamor.css)({
-  display: 'grid',
-  gridTemplateColumns: '1fr 2fr',
-  gridGap: '15px'
+var formContainer = (0, _glamor.css)({
+  backgroundColor: '#FDFDFD',
+  margin: '50px auto',
+  width: '40vw',
+  padding: '20px 40px',
+  borderRadius: '10px',
+  boxSizing: 'border-box',
+  boxShadow: '0 2px 6px hsla(0, 0%, 0%, 0.2)'
 });
 
-function Address(_ref) {
-  var address1 = _ref.address1,
-      address2 = _ref.address2,
-      city = _ref.city,
-      state = _ref.state,
-      zipCode = _ref.zipCode,
-      country = _ref.country,
-      handlers = _objectWithoutProperties(_ref, ['address1', 'address2', 'city', 'state', 'zipCode', 'country']);
+var buttonContainer = (0, _glamor.css)({
+  padding: '3px 10px',
+  display: 'flex',
+  justifyContent: 'flex-end'
+});
 
-  var onAddressChange = handlers.onAddressChange,
-      onCityChange = handlers.onCityChange,
-      onCountryChange = handlers.onCountryChange,
-      onStateChange = handlers.onStateChange,
-      onZipCodeChange = handlers.onZipCodeChange;
+var back = (0, _glamor.css)({
+  border: 'none',
+  fontWeight: 'bold',
+  textTransform: 'uppercase',
+  padding: '0 15px'
+});
 
-  return (0, _react3.createElement)(
-    _react.Fragment,
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
-      },
-      __self: this
-    },
-    (0, _react3.createElement)(
-      'div',
-      _extends({}, formGrid, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }),
-      (0, _react3.createElement)(
+var submit = (0, _glamor.css)({
+  border: 'none',
+  padding: '10px 15px',
+  backgroundColor: '#060906',
+  borderRadius: '5px',
+  color: '#FDFDFD',
+  textTransform: 'uppercase',
+  letterSpacing: '1px'
+});
+
+var Form = function (_Component) {
+  _inherits(Form, _Component);
+
+  function Form() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Form);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Form.__proto__ || Object.getPrototypeOf(Form)).call.apply(_ref, [this].concat(args))), _this), _this.handleUpdateInformation = function (category, fieldName) {
+      return function (e) {
+        var value = e.target.value;
+
+
+        _this.setState(function (state) {
+          return _defineProperty({}, category, Object.assign({}, state[category], _defineProperty({}, fieldName, value)));
+        });
+      };
+    }, _this.handleSubmit = function (e) {
+      e.preventDefault();
+
+      var step = _this.state.step;
+
+
+      if (step <= 4) {
+        _this.setState(function () {
+          return {
+            step: step + 1
+          };
+        });
+      } else {
+        console.log('form submitted');
+      }
+    }, _this.returnPreviousStep = function (e) {
+      e.preventDefault();
+
+      var step = _this.state.step;
+
+
+      _this.setState(function () {
+        return {
+          step: step <= 4 && step > 0 ? step - 1 : 1
+        };
+      });
+    }, _this.state = {
+      step: 1,
+      personalInfo: Object.assign({
+        firstName: '',
+        lastName: '',
+        emailAddress: '',
+        phoneNumber: ''
+      }, Form.getAddressTemplate()),
+      emergencyContact: Object.assign({
+        firstName: '',
+        lastName: ''
+      }, Form.getAddressTemplate()),
+      rallyInfo: Object.assign({}, Form.getAddressTemplate()),
+      userKits: []
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Form, [{
+    key: 'render',
+    value: function render() {
+      var step = this.state.step;
+
+      console.log('render');
+      return (0, _react3.createElement)(
         'div',
-        { css: { alignSelf: 'center' }, __source: {
+        _extends({}, formContainer, {
+          __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 113
           },
           __self: this
-        },
+        }),
         (0, _react3.createElement)(
-          'span',
+          'form',
           {
+            onSubmit: this.handleSubmit,
+            css: { display: 'grid', gridRowGap: '40px' },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 114
             },
             __self: this
           },
-          'Personal Address'
-        )
-      ),
-      (0, _react3.createElement)(
-        'div',
-        { className: 'form-field-container', __source: {
-            fileName: _jsxFileName,
-            lineNumber: 35
-          },
-          __self: this
-        },
-        (0, _react3.createElement)(
-          'div',
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 36
-            },
-            __self: this
-          },
+          this.props.render({
+            state: this.state,
+            onChange: this.handleUpdateInformation
+          }),
           (0, _react3.createElement)(
-            'label',
-            { htmlFor: 'address-line-1', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 37
-              },
-              __self: this
-            },
-            'Address Line 1'
-          ),
-          (0, _react3.createElement)('input', {
-            id: 'address-line-1',
-            value: address1,
-            onChange: onAddressChange,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 38
-            },
-            __self: this
-          })
-        ),
-        (0, _react3.createElement)(
-          'div',
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 44
-            },
-            __self: this
-          },
-          (0, _react3.createElement)(
-            'label',
-            { htmlFor: 'city', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 45
-              },
-              __self: this
-            },
-            'City'
-          ),
-          (0, _react3.createElement)('input', { id: 'city', value: city, onChange: onCityChange, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 46
-            },
-            __self: this
-          })
-        ),
-        (0, _react3.createElement)(
-          'div',
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 48
-            },
-            __self: this
-          },
-          (0, _react3.createElement)(
-            'label',
-            { htmlFor: 'zip-code', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 49
-              },
-              __self: this
-            },
-            'Zip Code'
-          ),
-          (0, _react3.createElement)('input', { id: 'zip-code', value: zipCode, onChange: onZipCodeChange, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 50
-            },
-            __self: this
-          })
-        ),
-        (0, _react3.createElement)(
-          'div',
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 52
-            },
-            __self: this
-          },
-          (0, _react3.createElement)(
-            'label',
-            { htmlFor: 'state', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 53
-              },
-              __self: this
-            },
-            'State'
-          ),
-          (0, _react3.createElement)(
-            'select',
-            { id: 'state', value: state, onChange: onStateChange, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 54
-              },
-              __self: this
-            },
-            (0, _react3.createElement)(
-              'option',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 55
-                },
-                __self: this
-              },
-              'Select State'
-            ),
-            (0, _react3.createElement)('option', {
+            'div',
+            _extends({}, buttonContainer, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 56
+                lineNumber: 122
               },
               __self: this
-            })
-          )
-        ),
-        (0, _react3.createElement)(
-          'div',
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 59
-            },
-            __self: this
-          },
-          (0, _react3.createElement)(
-            'label',
-            { htmlFor: 'country', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 60
-              },
-              __self: this
-            },
-            'Country'
-          ),
-          (0, _react3.createElement)(
-            'select',
-            { id: 'country', value: country, onChange: onCountryChange, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 61
-              },
-              __self: this
-            },
-            (0, _react3.createElement)(
-              'option',
-              {
-                __source: {
+            }),
+            !(step === 1) && (0, _react3.createElement)(
+              'button',
+              _extends({}, back, { onClick: this.returnPreviousStep, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 62
+                  lineNumber: 124
                 },
                 __self: this
-              },
-              'Select Country'
+              }),
+              'Back'
             ),
-            (0, _react3.createElement)('option', {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 63
-              },
-              __self: this
-            })
+            (0, _react3.createElement)(
+              'button',
+              _extends({}, submit, { type: 'submit', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 128
+                },
+                __self: this
+              }),
+              'Next'
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
+  }], [{
+    key: 'getAddressTemplate',
+    value: function getAddressTemplate() {
+      return {
+        address1: '',
+        address2: '',
+        city: '',
+        state: '',
+        zipCode: '',
+        country: ''
+      };
+    }
+  }]);
 
-exports.default = Address;
-},{"react":6,"glamor/react":31,"glamor":30}],135:[function(require,module,exports) {
+  return Form;
+}(_react.Component);
+
+exports.default = Form;
+},{"react":6,"glamor/react":31,"glamor":30}],50:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28248,13 +28187,12 @@ function Input(_ref) {
       error = _ref.error,
       props = _objectWithoutProperties(_ref, ['name', 'value', 'onChange', 'error']);
 
-  console.log(props, 'props');
   return _react2.default.createElement(
     _react.Fragment,
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 5
       },
       __self: this
     },
@@ -28262,7 +28200,7 @@ function Input(_ref) {
       'label',
       { htmlFor: props.for, __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 6
         },
         __self: this
       },
@@ -28277,7 +28215,7 @@ function Input(_ref) {
       placeholder: props.placeholder,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 7
       },
       __self: this
     })
@@ -28285,7 +28223,276 @@ function Input(_ref) {
 }
 
 exports.default = Input;
-},{"react":6}],32:[function(require,module,exports) {
+},{"react":6}],45:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/Address.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Input = require('./form-fields/Input');
+
+var _Input2 = _interopRequireDefault(_Input);
+
+var _react3 = require('glamor/react');
+
+var _glamor = require('glamor');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* @jsx createElement */
+
+var formGrid = (0, _glamor.css)({
+  display: 'grid',
+  gridTemplateColumns: '1fr 2fr',
+  gridGap: '15px'
+});
+
+function Address(_ref) {
+  var address1 = _ref.address1,
+      city = _ref.city,
+      zipCode = _ref.zipCode,
+      state = _ref.state,
+      country = _ref.country,
+      onChange = _ref.onChange,
+      category = _ref.category;
+
+  console.log(address1, city, onChange, category);
+  return (0, _react3.createElement)(
+    _react.Fragment,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    },
+    (0, _react3.createElement)(
+      'div',
+      _extends({}, formGrid, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }),
+      (0, _react3.createElement)(
+        'div',
+        { css: { alignSelf: 'center' }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          },
+          __self: this
+        },
+        (0, _react3.createElement)(
+          'span',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            },
+            __self: this
+          },
+          'Personal Address'
+        )
+      ),
+      (0, _react3.createElement)(
+        'div',
+        { className: 'form-field-container', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        },
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 31
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(_Input2.default, {
+            type: 'text',
+            label: 'Address',
+            'for': 'address-line-1',
+            id: 'address-line-1',
+            name: 'address1',
+            value: address1,
+            onChange: onChange(category, 'address1'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            },
+            __self: this
+          })
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 42
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(_Input2.default, {
+            type: 'text',
+            'for': 'city',
+            label: 'city',
+            id: 'id',
+            value: city,
+            name: 'city',
+            onChange: onChange(category, 'city'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
+            },
+            __self: this
+          })
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 53
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(_Input2.default, {
+            type: 'text',
+            label: 'Zip Code',
+            'for': 'zip-code',
+            id: 'zip-code',
+            name: 'zipCode',
+            value: zipCode,
+            onChange: onChange(category, 'zipCode'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 54
+            },
+            __self: this
+          })
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 64
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(
+            'label',
+            { htmlFor: 'state', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 65
+              },
+              __self: this
+            },
+            'State'
+          ),
+          (0, _react3.createElement)(
+            'select',
+            {
+              id: 'state',
+              value: state,
+              onChange: onChange(category, 'state'),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 66
+              },
+              __self: this
+            },
+            (0, _react3.createElement)(
+              'option',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 71
+                },
+                __self: this
+              },
+              'Select State'
+            ),
+            (0, _react3.createElement)('option', {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 72
+              },
+              __self: this
+            })
+          )
+        ),
+        (0, _react3.createElement)(
+          'div',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 75
+            },
+            __self: this
+          },
+          (0, _react3.createElement)(
+            'label',
+            { htmlFor: 'country', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 76
+              },
+              __self: this
+            },
+            'Country'
+          ),
+          (0, _react3.createElement)(
+            'select',
+            {
+              id: 'country',
+              value: country,
+              onChange: onChange(category, 'country'),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 77
+              },
+              __self: this
+            },
+            (0, _react3.createElement)(
+              'option',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 82
+                },
+                __self: this
+              },
+              'Select Country'
+            ),
+            (0, _react3.createElement)('option', {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 83
+              },
+              __self: this
+            })
+          )
+        )
+      )
+    )
+  );
+}
+
+exports.default = Address;
+},{"react":6,"./form-fields/Input":50,"glamor/react":31,"glamor":30}],32:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28300,9 +28507,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _NewEmergencyPlan = require('./NewEmergencyPlan');
+var _Form = require('./form-fields/Form');
 
-var _NewEmergencyPlan2 = _interopRequireDefault(_NewEmergencyPlan);
+var _Form2 = _interopRequireDefault(_Form);
 
 var _Address = require('./Address');
 
@@ -28334,39 +28541,29 @@ var stepLabel = (0, _glamor.css)({
   letterSpacing: '1px'
 });
 
-function PersonalInfo(_ref) {
+function PersonalInfo() {
   var _this = this;
 
-  var onPersonFirstNameChange = _ref.onPersonFirstNameChange,
-      onPersonLastNameChange = _ref.onPersonLastNameChange,
-      onPersonEmailAddressChange = _ref.onPersonEmailAddressChange,
-      onPersonPhoneNumberChange = _ref.onPersonPhoneNumberChange;
+  return (0, _react3.createElement)(_Form2.default, {
+    render: function render(_ref) {
+      var state = _ref.state,
+          onChange = _ref.onChange;
 
-  return (0, _react3.createElement)(
-    _NewEmergencyPlan2.default.Consumer,
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29
-      },
-      __self: this
-    },
-    function (_ref2) {
-      var personalInfo = _ref2.personalInfo,
-          handleUpdateInformation = _ref2.handleUpdateInformation;
+      var _state$personalInfo = state.personalInfo,
+          firstName = _state$personalInfo.firstName,
+          lastName = _state$personalInfo.lastName,
+          emailAddress = _state$personalInfo.emailAddress,
+          phoneNumber = _state$personalInfo.phoneNumber,
+          address = _objectWithoutProperties(_state$personalInfo, ['firstName', 'lastName', 'emailAddress', 'phoneNumber']);
 
-      var firstName = personalInfo.firstName,
-          lastName = personalInfo.lastName,
-          emailAddress = personalInfo.emailAddress,
-          phoneNumber = personalInfo.phoneNumber,
-          address = _objectWithoutProperties(personalInfo, ['firstName', 'lastName', 'emailAddress', 'phoneNumber']);
-
-      return (0, _react3.createElement)(
+      console.log('children render');
+      var addressInfo = Object.assign({}, address, { onChange: onChange, category: 'personalInfo' });
+      return state.step === 1 && (0, _react3.createElement)(
         _react.Fragment,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 37
           },
           __self: _this
         },
@@ -28375,7 +28572,7 @@ function PersonalInfo(_ref) {
           _extends({}, stepLabel, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 41
+              lineNumber: 38
             },
             __self: _this
           }),
@@ -28384,7 +28581,7 @@ function PersonalInfo(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 42
+                lineNumber: 39
               },
               __self: _this
             },
@@ -28395,7 +28592,7 @@ function PersonalInfo(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 43
+                lineNumber: 40
               },
               __self: _this
             },
@@ -28406,7 +28603,7 @@ function PersonalInfo(_ref) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 44
+                lineNumber: 41
               },
               __self: _this
             },
@@ -28418,7 +28615,7 @@ function PersonalInfo(_ref) {
           _extends({}, formGrid, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 46
+              lineNumber: 43
             },
             __self: _this
           }),
@@ -28426,7 +28623,7 @@ function PersonalInfo(_ref) {
             'div',
             { css: { alignSelf: 'center' }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 47
+                lineNumber: 44
               },
               __self: _this
             },
@@ -28435,7 +28632,7 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 48
+                  lineNumber: 45
                 },
                 __self: _this
               },
@@ -28446,7 +28643,7 @@ function PersonalInfo(_ref) {
             'div',
             { className: 'form-field-container', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 50
+                lineNumber: 47
               },
               __self: _this
             },
@@ -28455,7 +28652,7 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 51
+                  lineNumber: 48
                 },
                 __self: _this
               },
@@ -28467,10 +28664,10 @@ function PersonalInfo(_ref) {
                 name: 'firstName',
                 placeholder: 'First Name...',
                 value: firstName,
-                onChange: onPersonFirstNameChange,
+                onChange: onChange('personalInfo', 'firstName'),
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 52
+                  lineNumber: 49
                 },
                 __self: _this
               })
@@ -28480,7 +28677,7 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 63
+                  lineNumber: 60
                 },
                 __self: _this
               },
@@ -28488,12 +28685,13 @@ function PersonalInfo(_ref) {
                 type: 'text',
                 'for': 'last-name',
                 id: 'last-name',
+                label: 'Last Name',
                 name: 'lastName',
                 value: lastName,
-                onChange: onPersonLastNameChange,
+                onChange: onChange('personalInfo', 'lastName'),
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 64
+                  lineNumber: 61
                 },
                 __self: _this
               })
@@ -28503,7 +28701,7 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 73
+                  lineNumber: 71
                 },
                 __self: _this
               },
@@ -28511,12 +28709,13 @@ function PersonalInfo(_ref) {
                 type: 'text',
                 'for': 'email-address',
                 id: 'email-address',
+                label: 'Email Address',
                 name: 'emailAddress',
                 value: emailAddress,
-                onChange: onPersonEmailAddressChange,
+                onChange: onChange('personalInfo', 'emailAddress'),
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 74
+                  lineNumber: 72
                 },
                 __self: _this
               })
@@ -28526,7 +28725,7 @@ function PersonalInfo(_ref) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 83
+                  lineNumber: 82
                 },
                 __self: _this
               },
@@ -28534,24 +28733,20 @@ function PersonalInfo(_ref) {
                 type: 'text',
                 'for': 'phone-number',
                 id: 'phone-number',
+                label: 'Phone Number',
                 name: 'phoneNumber',
                 value: phoneNumber,
-                onChange: onPersonEmailAddressChange,
+                onChange: onChange('personalInfo', 'phoneNumber'),
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 84
+                  lineNumber: 83
                 },
                 __self: _this
               })
             )
           )
         ),
-        (0, _react3.createElement)(_Address2.default, _extends({}, address, {
-          onAddressChange: handleUpdateInformation('personalInfo', 'address1'),
-          onCityChange: handleUpdateInformation('personalInfo', 'city'),
-          onZipCodeChange: handleUpdateInformation('personalInfo', 'zipCode'),
-          onStateChange: handleUpdateInformation('personalInfo', 'state'),
-          onCountryChange: handleUpdateInformation('personalInfo', 'country'),
+        (0, _react3.createElement)(_Address2.default, _extends({}, addressInfo, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 96
@@ -28559,333 +28754,22 @@ function PersonalInfo(_ref) {
           __self: _this
         }))
       );
-    }
-  );
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  });
 }
 
 exports.default = PersonalInfo;
-},{"react":6,"./NewEmergencyPlan":14,"./Address":43,"./form-fields/Input":135,"glamor/react":31,"glamor":30}],125:[function(require,module,exports) {
+},{"react":6,"./form-fields/Form":121,"./Address":45,"./form-fields/Input":50,"glamor/react":31,"glamor":30}],14:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/EmergencyContact.js';
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Address = require('./Address');
-
-var _Address2 = _interopRequireDefault(_Address);
-
-var _react3 = require('glamor/react');
-
-var _glamor = require('glamor');
-
-var _NewEmergencyPlan = require('./NewEmergencyPlan');
-
-var _NewEmergencyPlan2 = _interopRequireDefault(_NewEmergencyPlan);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-/* @jsx createElement */
-
-var stepLabel = (0, _glamor.css)({
-  textTransform: 'uppercase',
-  fontWeight: 'bold',
-  letterSpacing: '1px',
-  lineHeight: '1.2'
-});
-
-function EmergencyContact() {
-  var _this = this;
-
-  return (0, _react3.createElement)(
-    _NewEmergencyPlan2.default.Consumer,
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      },
-      __self: this
-    },
-    function (_ref) {
-      var emergencyContact = _ref.emergencyContact,
-          handleUpdateInformation = _ref.handleUpdateInformation;
-
-      var firstName = emergencyContact.firstName,
-          lastName = emergencyContact.lastName,
-          address = _objectWithoutProperties(emergencyContact, ['firstName', 'lastName']);
-
-      return (0, _react3.createElement)(
-        _react.Fragment,
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23
-          },
-          __self: _this
-        },
-        (0, _react3.createElement)(
-          'div',
-          _extends({}, stepLabel, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 24
-            },
-            __self: _this
-          }),
-          (0, _react3.createElement)(
-            'span',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 25
-              },
-              __self: _this
-            },
-            'Step 2'
-          ),
-          (0, _react3.createElement)(
-            'span',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 26
-              },
-              __self: _this
-            },
-            ' - '
-          ),
-          (0, _react3.createElement)(
-            'span',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 27
-              },
-              __self: _this
-            },
-            'Emergency Contact Information'
-          ),
-          (0, _react3.createElement)(
-            'p',
-            {
-              css: {
-                fontWeight: 'lighter',
-                fontSize: '9px',
-                letterSpacing: '1px'
-              },
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 28
-              },
-              __self: _this
-            },
-            'Please enter your emergency contact\'s information'
-          )
-        ),
-        (0, _react3.createElement)(
-          'div',
-          { className: 'form-field-container', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 38
-            },
-            __self: _this
-          },
-          (0, _react3.createElement)(
-            'div',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 39
-              },
-              __self: _this
-            },
-            (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'first-name', __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 40
-                },
-                __self: _this
-              },
-              'First Name'
-            ),
-            (0, _react3.createElement)('input', {
-              id: 'first-name',
-              type: 'text',
-              name: 'firstName',
-              placeholder: 'First Name',
-              value: firstName,
-              onChange: handleUpdateInformation('emergencyContact', 'firstName'),
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 41
-              },
-              __self: _this
-            })
-          ),
-          (0, _react3.createElement)(
-            'div',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 53
-              },
-              __self: _this
-            },
-            (0, _react3.createElement)(
-              'label',
-              { htmlFor: 'last-name', __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 54
-                },
-                __self: _this
-              },
-              'Last Name'
-            ),
-            (0, _react3.createElement)('input', {
-              id: 'last-name',
-              type: 'text',
-              name: 'lastName',
-              placeholder: 'Last Name',
-              value: lastName,
-              onChange: handleUpdateInformation('emergencyContact', 'lastName'),
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 55
-              },
-              __self: _this
-            })
-          )
-        ),
-        (0, _react3.createElement)(
-          'div',
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 68
-            },
-            __self: _this
-          },
-          (0, _react3.createElement)(_Address2.default, _extends({}, address, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 69
-            },
-            __self: _this
-          }))
-        )
-      );
-    }
-  );
-}
-
-exports.default = EmergencyContact;
-},{"react":6,"./Address":43,"glamor/react":31,"glamor":30,"./NewEmergencyPlan":14}],130:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/RallyInfo.js';
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _react3 = require('glamor/react');
-
-var _glamor = require('glamor');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* @jsx createElement */
-
-var stepLabel = (0, _glamor.css)({
-  textTransform: 'uppercase',
-  fontWeight: 'bold',
-  letterSpacing: '1px'
-});
-
-function RallyInfo() {
-  return (0, _react3.createElement)(
-    _react.Fragment,
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    },
-    (0, _react3.createElement)(
-      'div',
-      _extends({}, stepLabel, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        },
-        __self: this
-      }),
-      (0, _react3.createElement)(
-        'span',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 17
-          },
-          __self: this
-        },
-        'Step 3'
-      ),
-      (0, _react3.createElement)(
-        'span',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 18
-          },
-          __self: this
-        },
-        ' - '
-      ),
-      (0, _react3.createElement)(
-        'span',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 19
-          },
-          __self: this
-        },
-        'Rally Location'
-      )
-    ),
-    'Rally Information'
-  );
-}
-
-exports.default = RallyInfo;
-},{"react":6,"glamor/react":31,"glamor":30}],14:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/NewEmergencyPlan.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28898,21 +28782,11 @@ var _PersonalInfo = require('./PersonalInfo');
 
 var _PersonalInfo2 = _interopRequireDefault(_PersonalInfo);
 
-var _EmergencyContact = require('./EmergencyContact');
-
-var _EmergencyContact2 = _interopRequireDefault(_EmergencyContact);
-
-var _RallyInfo = require('./RallyInfo');
-
-var _RallyInfo2 = _interopRequireDefault(_RallyInfo);
-
 var _react3 = require('glamor/react');
 
 var _glamor = require('glamor');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -28966,203 +28840,37 @@ var NewEmergencyPlan = function (_Component) {
   _inherits(NewEmergencyPlan, _Component);
 
   function NewEmergencyPlan() {
-    var _ref,
-        _this2 = this;
-
-    var _temp, _this, _ret;
-
     _classCallCheck(this, NewEmergencyPlan);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NewEmergencyPlan.__proto__ || Object.getPrototypeOf(NewEmergencyPlan)).call.apply(_ref, [this].concat(args))), _this), _this.handleUpdateInformation = function (category, fieldName) {
-      return function (e) {
-        var value = e.target.value;
-
-
-        _this.setState(function (state) {
-          return _defineProperty({}, category, Object.assign({}, state[category], _defineProperty({}, fieldName, value)));
-        });
-      };
-    }, _this.handleSubmit = function (e) {
-      e.preventDefault();
-
-      var step = _this.state.step;
-
-
-      if (step <= 4) {
-        _this.setState(function () {
-          return {
-            step: step + 1
-          };
-        });
-      } else {
-        console.log('form submitted');
-      }
-    }, _this.returnPreviousStep = function (e) {
-      e.preventDefault();
-
-      var step = _this.state.step;
-
-
-      _this.setState(function () {
-        return {
-          step: step <= 4 && step > 0 ? step - 1 : 1
-        };
-      });
-    }, _this.state = {
-      step: 1,
-      personalInfo: Object.assign({
-        firstName: '',
-        lastName: '',
-        emailAddress: '',
-        phoneNumber: ''
-      }, NewEmergencyPlan.getAddressTemplate()),
-      emergencyContact: Object.assign({
-        firstName: '',
-        lastName: ''
-      }, NewEmergencyPlan.getAddressTemplate()),
-      rallyInfo: Object.assign({}, NewEmergencyPlan.getAddressTemplate()),
-      userKits: [],
-      handleUpdateInformation: _this.handleUpdateInformation
-    }, _this.renderFormBasedOnStepCount = function (step) {
-      var personalInfo = _this.state.personalInfo;
-
-
-      if (step === 1) {
-        return (0, _react3.createElement)(_PersonalInfo2.default, {
-          onPersonFirstNameChange: _this.handleUpdateInformation('personalInfo', 'firstName'),
-          onPersonLastNameChange: _this.handleUpdateInformation('personalInfo', 'lastName'),
-          onPersonEmailAddressChange: _this.handleUpdateInformation('personalInfo', 'emailAddress'),
-          onPersonPhoneNumberChange: _this.handleUpdateInformation('personalInfo', 'phoneNumber'),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 127
-          },
-          __self: _this2
-        });
-      }
-
-      if (step === 2) {
-        return (0, _react3.createElement)(_EmergencyContact2.default, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 149
-          },
-          __self: _this2
-        });
-      }
-
-      if (step === 3) {
-        return (0, _react3.createElement)(_RallyInfo2.default, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 153
-          },
-          __self: _this2
-        });
-      }
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    return _possibleConstructorReturn(this, (NewEmergencyPlan.__proto__ || Object.getPrototypeOf(NewEmergencyPlan)).apply(this, arguments));
   }
 
   _createClass(NewEmergencyPlan, [{
     key: 'render',
     value: function render() {
-      var _state = this.state,
-          personalInfo = _state.personalInfo,
-          step = _state.step;
-
-      console.log(this.state);
-      return (0, _react3.createElement)(
-        NewPlanContext.Provider,
-        { value: this.state, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 161
-          },
-          __self: this
+      return (0, _react3.createElement)(_PersonalInfo2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
         },
-        (0, _react3.createElement)(
-          'div',
-          _extends({}, formContainer, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 162
-            },
-            __self: this
-          }),
-          (0, _react3.createElement)(
-            'form',
-            {
-              onSubmit: this.handleSubmit,
-              css: { display: 'grid', gridRowGap: '40px' },
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 163
-              },
-              __self: this
-            },
-            this.renderFormBasedOnStepCount(step),
-            (0, _react3.createElement)(
-              'div',
-              _extends({}, buttonContainer, {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 169
-                },
-                __self: this
-              }),
-              !(step === 1) && (0, _react3.createElement)(
-                'button',
-                _extends({}, back, { onClick: this.returnPreviousStep, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 171
-                  },
-                  __self: this
-                }),
-                'Back'
-              ),
-              (0, _react3.createElement)(
-                'button',
-                _extends({}, submit, { type: 'submit', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 175
-                  },
-                  __self: this
-                }),
-                'Next'
-              )
-            )
-          )
-        )
-      );
-    }
-  }], [{
-    key: 'getAddressTemplate',
-    value: function getAddressTemplate() {
-      return {
-        address1: '',
-        address2: '',
-        city: '',
-        state: '',
-        zipCode: '',
-        country: ''
-      };
+        __self: this
+      });
     }
   }]);
 
   return NewEmergencyPlan;
 }(_react.Component);
 
-NewEmergencyPlan.Consumer = NewPlanContext.Consumer;
 exports.default = NewEmergencyPlan;
-},{"react":6,"./PersonalInfo":32,"./EmergencyContact":125,"./RallyInfo":130,"glamor/react":31,"glamor":30}],4:[function(require,module,exports) {
+},{"react":6,"./PersonalInfo":32,"glamor/react":31,"glamor":30}],4:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/App.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -29213,6 +28921,8 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         _reactRouterDom.BrowserRouter,
         {
@@ -29265,7 +28975,18 @@ var App = function (_Component) {
               },
               __self: this
             }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/create', component: _NewEmergencyPlan2.default, __source: {
+            _react2.default.createElement(_reactRouterDom.Route, {
+              path: '/create',
+              render: function render(props) {
+                return _react2.default.createElement(_NewEmergencyPlan2.default, _extends({}, props, {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 25
+                  },
+                  __self: _this2
+                }));
+              },
+              __source: {
                 fileName: _jsxFileName,
                 lineNumber: 23
               },
@@ -29281,7 +29002,7 @@ var App = function (_Component) {
 }(_react.Component);
 
 exports.default = App;
-},{"react":6,"react-router-dom":15,"./Home":9,"./Navbar":10,"./Login":11,"./Register":12,"./forms/NewEmergencyPlan":14}],3:[function(require,module,exports) {
+},{"react":6,"react-router-dom":15,"./Home":10,"./Navbar":11,"./Login":12,"./Register":13,"./forms/NewEmergencyPlan":14}],3:[function(require,module,exports) {
 'use strict';
 
 var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/index.js';
@@ -29307,7 +29028,7 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, {
   },
   __self: undefined
 }), document.getElementById('app'));
-},{"react":6,"react-dom":7,"./components/App":4}],136:[function(require,module,exports) {
+},{"react":6,"react-dom":7,"./components/App":4}],114:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -29336,7 +29057,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49525' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54182' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -29477,5 +29198,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[136,3], null)
+},{}]},{},[114,3], null)
 //# sourceMappingURL=/prepared_for_disaster_v2.5fe5b813.map

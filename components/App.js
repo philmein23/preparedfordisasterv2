@@ -20,7 +20,10 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route exact path="/" component={Home} />
-            <Route path="/create" component={NewEmergencyPlan} />
+            <Route
+              path="/create"
+              render={props => <NewEmergencyPlan {...props} />}
+            />
           </Switch>
         </Fragment>
       </Router>

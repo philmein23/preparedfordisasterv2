@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NewEmergencyPlan from './NewEmergencyPlan';
+import Form from './form-fields/Form';
 import Address from './Address';
 import Input from './form-fields/Input';
 
@@ -19,101 +19,86 @@ const stepLabel = css({
   letterSpacing: '1px'
 });
 
-function PersonalInfo({
-  onPersonFirstNameChange,
-  onPersonLastNameChange,
-  onPersonEmailAddressChange,
-  onPersonPhoneNumberChange
-}) {
+function PersonalInfo() {
   return (
-    <NewEmergencyPlan.Consumer>
-      {({ personalInfo, handleUpdateInformation }) => {
+    <Form
+      render={({ state, onChange }) => {
         const {
           firstName,
           lastName,
           emailAddress,
           phoneNumber,
           ...address
-        } = personalInfo;
-
+        } = state.personalInfo;
+        console.log('children render');
+        const addressInfo = { ...address, onChange, category: 'personalInfo' };
         return (
-          <Fragment>
-            <div {...stepLabel}>
-              <span>Step 1</span>
-              <span> - </span>
-              <span>Personal Information</span>
-            </div>
-            <div {...formGrid}>
-              <div css={{ alignSelf: 'center' }}>
-                <span>General Information</span>
+          state.step === 1 && (
+            <Fragment>
+              <div {...stepLabel}>
+                <span>Step 1</span>
+                <span> - </span>
+                <span>Personal Information</span>
               </div>
-              <div className="form-field-container">
-                <div>
-                  <Input
-                    type="text"
-                    for="first-name"
-                    id="first-name"
-                    label="First Name"
-                    name="firstName"
-                    placeholder="First Name..."
-                    value={firstName}
-                    onChange={onPersonFirstNameChange}
-                  />
+              <div {...formGrid}>
+                <div css={{ alignSelf: 'center' }}>
+                  <span>General Information</span>
                 </div>
-                <div>
-                  <Input
-                    type="text"
-                    for="last-name"
-                    id="last-name"
-                    name="lastName"
-                    value={lastName}
-                    onChange={onPersonLastNameChange}
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="text"
-                    for="email-address"
-                    id="email-address"
-                    name="emailAddress"
-                    value={emailAddress}
-                    onChange={onPersonEmailAddressChange}
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="text"
-                    for="phone-number"
-                    id="phone-number"
-                    name="phoneNumber"
-                    value={phoneNumber}
-                    onChange={onPersonEmailAddressChange}
-                  />
+                <div className="form-field-container">
+                  <div>
+                    <Input
+                      type="text"
+                      for="first-name"
+                      id="first-name"
+                      label="First Name"
+                      name="firstName"
+                      placeholder="First Name..."
+                      value={firstName}
+                      onChange={onChange('personalInfo', 'firstName')}
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="text"
+                      for="last-name"
+                      id="last-name"
+                      label="Last Name"
+                      name="lastName"
+                      value={lastName}
+                      onChange={onChange('personalInfo', 'lastName')}
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="text"
+                      for="email-address"
+                      id="email-address"
+                      label="Email Address"
+                      name="emailAddress"
+                      value={emailAddress}
+                      onChange={onChange('personalInfo', 'emailAddress')}
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="text"
+                      for="phone-number"
+                      id="phone-number"
+                      label="Phone Number"
+                      name="phoneNumber"
+                      value={phoneNumber}
+                      onChange={onChange('personalInfo', 'phoneNumber')}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <Address
-              {...address}
-              onAddressChange={handleUpdateInformation(
-                'personalInfo',
-                'address1'
-              )}
-              onCityChange={handleUpdateInformation('personalInfo', 'city')}
-              onZipCodeChange={handleUpdateInformation(
-                'personalInfo',
-                'zipCode'
-              )}
-              onStateChange={handleUpdateInformation('personalInfo', 'state')}
-              onCountryChange={handleUpdateInformation(
-                'personalInfo',
-                'country'
-              )}
-            />
-          </Fragment>
+              <Address {...addressInfo} />
+            </Fragment>
+          )
         );
       }}
-    </NewEmergencyPlan.Consumer>
+    />
   );
 }
 
