@@ -28965,7 +28965,104 @@ function EmergencyContact(_ref) {
 }
 
 exports.default = EmergencyContact;
-},{"react":6,"./form-fields/Form":121,"./Address":45,"glamor/react":31,"glamor":30,"./NewEmergencyPlan":14}],14:[function(require,module,exports) {
+},{"react":6,"./form-fields/Form":121,"./Address":45,"glamor/react":31,"glamor":30,"./NewEmergencyPlan":14}],125:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/Users/philnguyen/Desktop/Projects/prepared_for_disaster_v2/components/forms/RallyInfo.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Address = require('./Address');
+
+var _Address2 = _interopRequireDefault(_Address);
+
+var _react3 = require('glamor/react');
+
+var _glamor = require('glamor');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* @jsx createElement */
+
+var stepLabel = (0, _glamor.css)({
+  textTransform: 'uppercase',
+  fontWeight: 'bold',
+  letterSpacing: '1px'
+});
+
+function RallyInfo(rallyInfo) {
+  return (0, _react3.createElement)(
+    _react.Fragment,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    },
+    (0, _react3.createElement)(
+      'div',
+      _extends({}, stepLabel, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }),
+      (0, _react3.createElement)(
+        'span',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18
+          },
+          __self: this
+        },
+        'Step 3'
+      ),
+      (0, _react3.createElement)(
+        'span',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          },
+          __self: this
+        },
+        ' - '
+      ),
+      (0, _react3.createElement)(
+        'span',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20
+          },
+          __self: this
+        },
+        'Rally Location'
+      )
+    ),
+    (0, _react3.createElement)(_Address2.default, _extends({}, rallyInfo, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }))
+  );
+}
+
+exports.default = RallyInfo;
+},{"react":6,"./Address":45,"glamor/react":31,"glamor":30}],14:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28997,6 +29094,10 @@ var _EmergencyContact2 = _interopRequireDefault(_EmergencyContact);
 var _react3 = require('glamor/react');
 
 var _glamor = require('glamor');
+
+var _RallyInfo = require('./RallyInfo');
+
+var _RallyInfo2 = _interopRequireDefault(_RallyInfo);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29037,7 +29138,7 @@ var NewEmergencyPlan = function (_Component) {
             return (0, _react3.createElement)(_PersonalInfo2.default, _extends({}, info, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 18
+                lineNumber: 19
               },
               __self: _this2
             }));
@@ -29048,7 +29149,18 @@ var NewEmergencyPlan = function (_Component) {
             return (0, _react3.createElement)(_EmergencyContact2.default, _extends({}, _info, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 23
+                lineNumber: 24
+              },
+              __self: _this2
+            }));
+          }
+
+          if (step === 3) {
+            var _info2 = Object.assign({}, rallyInfo, { onChange: onChange });
+            return (0, _react3.createElement)(_RallyInfo2.default, _extends({}, _info2, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 29
               },
               __self: _this2
             }));
@@ -29056,7 +29168,7 @@ var NewEmergencyPlan = function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 13
         },
         __self: this
       });
@@ -29067,7 +29179,7 @@ var NewEmergencyPlan = function (_Component) {
 }(_react.Component);
 
 exports.default = NewEmergencyPlan;
-},{"react":6,"./PersonalInfo":32,"./form-fields/Form":121,"./EmergencyContact":122,"glamor/react":31,"glamor":30}],4:[function(require,module,exports) {
+},{"react":6,"./PersonalInfo":32,"./form-fields/Form":121,"./EmergencyContact":122,"glamor/react":31,"glamor":30,"./RallyInfo":125}],4:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
