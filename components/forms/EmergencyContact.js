@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 
+import Form from './form-fields/Form';
 import Address from './Address';
 
 import { createElement } from 'glamor/react';
@@ -14,64 +15,52 @@ const stepLabel = css({
   lineHeight: '1.2'
 });
 
-function EmergencyContact() {
+function EmergencyContact({ firstName, lastName, onChange, ...address }) {
+  const addressInfo = { ...address, onChange, category: 'emergencyContact' };
   return (
-    <NewEmergencyPlan.Consumer>
-      {({ emergencyContact, handleUpdateInformation }) => {
-        const { firstName, lastName, ...address } = emergencyContact;
-        return (
-          <Fragment>
-            <div {...stepLabel}>
-              <span>Step 2</span>
-              <span> - </span>
-              <span>Emergency Contact Information</span>
-              <p
-                css={{
-                  fontWeight: 'lighter',
-                  fontSize: '9px',
-                  letterSpacing: '1px'
-                }}
-              >
-                Please enter your emergency contact's information
-              </p>
-            </div>
-            <div className="form-field-container">
-              <div>
-                <label htmlFor="first-name">First Name</label>
-                <input
-                  id="first-name"
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={firstName}
-                  onChange={handleUpdateInformation(
-                    'emergencyContact',
-                    'firstName'
-                  )}
-                />
-              </div>
-              <div>
-                <label htmlFor="last-name">Last Name</label>
-                <input
-                  id="last-name"
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={lastName}
-                  onChange={handleUpdateInformation(
-                    'emergencyContact',
-                    'lastName'
-                  )}
-                />
-              </div>
-            </div>
-            <div>
-              <Address {...address} />
-            </div>
-          </Fragment>
-        );
-      }}
-    </NewEmergencyPlan.Consumer>
+    <Fragment>
+      <div {...stepLabel}>
+        <span>Step 2</span>
+        <span> - </span>
+        <span>Emergency Contact Information</span>
+        <p
+          css={{
+            fontWeight: 'lighter',
+            fontSize: '9px',
+            letterSpacing: '1px'
+          }}
+        >
+          Please enter your emergency contact's information
+        </p>
+      </div>
+      <div className="form-field-container">
+        <div>
+          <label htmlFor="first-name">First Name</label>
+          <input
+            id="first-name"
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            value={firstName}
+            onChange={onChange('emergencyContact', 'firstName')}
+          />
+        </div>
+        <div>
+          <label htmlFor="last-name">Last Name</label>
+          <input
+            id="last-name"
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={onChange('emergencyContact', 'lastName')}
+          />
+        </div>
+      </div>
+      <div>
+        <Address {...addressInfo} />
+      </div>
+    </Fragment>
   );
 }
 

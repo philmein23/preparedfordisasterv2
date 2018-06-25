@@ -19,86 +19,78 @@ const stepLabel = css({
   letterSpacing: '1px'
 });
 
-function PersonalInfo() {
+function PersonalInfo({
+  onChange,
+  firstName,
+  lastName,
+  emailAddress,
+  phoneNumber,
+  ...address
+}) {
+  console.log('children render');
+  const addressInfo = { ...address, onChange, category: 'personalInfo' };
   return (
-    <Form
-      render={({ state, onChange }) => {
-        const {
-          firstName,
-          lastName,
-          emailAddress,
-          phoneNumber,
-          ...address
-        } = state.personalInfo;
-        console.log('children render');
-        const addressInfo = { ...address, onChange, category: 'personalInfo' };
-        return (
-          state.step === 1 && (
-            <Fragment>
-              <div {...stepLabel}>
-                <span>Step 1</span>
-                <span> - </span>
-                <span>Personal Information</span>
-              </div>
-              <div {...formGrid}>
-                <div css={{ alignSelf: 'center' }}>
-                  <span>General Information</span>
-                </div>
-                <div className="form-field-container">
-                  <div>
-                    <Input
-                      type="text"
-                      for="first-name"
-                      id="first-name"
-                      label="First Name"
-                      name="firstName"
-                      placeholder="First Name..."
-                      value={firstName}
-                      onChange={onChange('personalInfo', 'firstName')}
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="text"
-                      for="last-name"
-                      id="last-name"
-                      label="Last Name"
-                      name="lastName"
-                      value={lastName}
-                      onChange={onChange('personalInfo', 'lastName')}
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="text"
-                      for="email-address"
-                      id="email-address"
-                      label="Email Address"
-                      name="emailAddress"
-                      value={emailAddress}
-                      onChange={onChange('personalInfo', 'emailAddress')}
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="text"
-                      for="phone-number"
-                      id="phone-number"
-                      label="Phone Number"
-                      name="phoneNumber"
-                      value={phoneNumber}
-                      onChange={onChange('personalInfo', 'phoneNumber')}
-                    />
-                  </div>
-                </div>
-              </div>
+    <Fragment>
+      <div {...stepLabel}>
+        <span>Step 1</span>
+        <span> - </span>
+        <span>Personal Information</span>
+      </div>
+      <div {...formGrid}>
+        <div css={{ alignSelf: 'center' }}>
+          <span>General Information</span>
+        </div>
+        <div className="form-field-container">
+          <div>
+            <Input
+              type="text"
+              for="first-name"
+              id="first-name"
+              label="First Name"
+              name="firstName"
+              placeholder="First Name..."
+              value={firstName}
+              onChange={onChange('personalInfo', 'firstName')}
+            />
+          </div>
+          <div>
+            <Input
+              type="text"
+              for="last-name"
+              id="last-name"
+              label="Last Name"
+              name="lastName"
+              value={lastName}
+              onChange={onChange('personalInfo', 'lastName')}
+            />
+          </div>
+          <div>
+            <Input
+              type="text"
+              for="email-address"
+              id="email-address"
+              label="Email Address"
+              name="emailAddress"
+              value={emailAddress}
+              onChange={onChange('personalInfo', 'emailAddress')}
+            />
+          </div>
+          <div>
+            <Input
+              type="text"
+              for="phone-number"
+              id="phone-number"
+              label="Phone Number"
+              name="phoneNumber"
+              value={phoneNumber}
+              onChange={onChange('personalInfo', 'phoneNumber')}
+            />
+          </div>
+        </div>
+      </div>
 
-              <Address {...addressInfo} />
-            </Fragment>
-          )
-        );
-      }}
-    />
+      <Address {...addressInfo} />
+    </Fragment>
   );
 }
 
