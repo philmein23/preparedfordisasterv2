@@ -8,26 +8,40 @@ import RallyInfo from './RallyInfo';
 /* @jsx createElement */
 
 class NewEmergencyPlan extends Component {
+  renderForm = (state, onChange) => {
+    const { step, personalInfo, emergencyContact, rallyInfo } = state;
+
+    if (step === 1) {
+      return (
+        <PersonalInfo {...this.mergeData({ data: personalInfo, onChange })} />
+      );
+    }
+
+    if (step === 2) {
+      return (
+        <EmergencyContact
+          {...this.mergeData({ data: emergencyContact, onChange })}
+        />
+      );
+    }
+
+    if (step === 3) {
+      return <RallyInfo {...this.mergeData({ data: rallyInfo, onChange })} />;
+    }
+  };
+
+  mergeData = ({ data, onChange }) => {
+    return {
+      ...data,
+      onChange
+    };
+  };
+
   render() {
     return (
       <Form
         render={({ state, onChange }) => {
-          const { step, personalInfo, emergencyContact, rallyInfo } = state;
-
-          if (step === 1) {
-            const info = { ...personalInfo, onChange };
-            return <PersonalInfo {...info} />;
-          }
-
-          if (step === 2) {
-            const info = { ...emergencyContact, onChange };
-            return <EmergencyContact {...info} />;
-          }
-
-          if (step === 3) {
-            const info = { ...rallyInfo, onChange };
-            return <RallyInfo {...info} />;
-          }
+          return this.renderForm(state, onChange);
         }}
       />
     );
