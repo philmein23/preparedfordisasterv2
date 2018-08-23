@@ -20,7 +20,6 @@ function Address({
   onChange,
   category
 }) {
-  console.log(address1, city, onChange, category);
   return (
     <Fragment>
       <div {...formGrid}>
